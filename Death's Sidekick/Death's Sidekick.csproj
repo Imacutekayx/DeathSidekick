@@ -304,6 +304,9 @@
     <Compile Include="Assets\Scripts\TargetScreen\Link.cs" />
     <Compile Include="Assets\Scripts\TargetScreen\Other.cs" />
     <Compile Include="Assets\Scripts\TargetScreen\Target.cs" />
+    <Compile Include="Assets\Scripts\TargetScreen\TargetRandom\BasicCharact.cs" />
+    <Compile Include="Assets\Scripts\TargetScreen\TargetRandom\LinksTarget.cs" />
+    <Compile Include="Assets\Scripts\TargetScreen\TargetRandom\SpaceCharact.cs" />
     <Compile Include="Assets\Scripts\TargetScreen\TargetScreenLoad.cs" />
   </ItemGroup>
   <ItemGroup>
