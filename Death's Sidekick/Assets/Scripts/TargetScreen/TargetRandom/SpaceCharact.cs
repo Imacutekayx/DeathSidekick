@@ -19,5 +19,23 @@
         {
             target = linkedTarget;
         }
+
+        private void RandomSpeed()
+        {
+            //Fix of bad Randoms
+            if(target.speed > 100)
+            {
+                target.speed = 100;
+            }
+            else if(target.speed < 0)
+            {
+                target.speed = 0;
+            }
+        }
+
+        private void RandomStrength()
+        {
+
+        }
     }
 }
