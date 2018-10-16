@@ -1,0 +1,15 @@
+-You need to kill at least 1 person per Week to stay Alive
+-Death show you 5 new targets every weeks
+-Weeks can have special events
+-50 weeks + final
+-Powers charged with each soul
+-Can choose no target if already soul this week
+-Sunday only choice => Attack if no soul in Crystal
+-Choices => 	-Study links
+		-Study map
+		-Buy
+		-Work
+		-Train:
+			-Speed
+			-Strength
+			-Stamina
