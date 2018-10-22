@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Assets.Scripts.TargetScreen.TargetRandom
+namespace Assets.Scripts.Target.TargetRandom
 {
     /// <summary>
     /// Class creating the target's links

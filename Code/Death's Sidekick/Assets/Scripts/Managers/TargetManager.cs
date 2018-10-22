@@ -8,9 +8,22 @@ namespace Assets.Scripts.Managers
     public class TargetManager
     {
         //Objects
-        public List<Target> currentTargets = new List<Target>();
-        private TargetScreenLoad targetScreenLoad = new TargetScreenLoad();
-        private Target tempTarget;
+        public List<Target.Target> currentTargets = new List<Target.Target>();
+        public List<Target.XML.Job> jobs = new List<Target.XML.Job>();
+        public List<Target.XML.Forname> fornames = new List<Target.XML.Forname>();
+        public List<Target.XML.Lastname> lastnames = new List<Target.XML.Lastname>();
+        public List<string> origins = new List<string>();
+        private Target.TargetScreenLoad targetScreenLoad = new Target.TargetScreenLoad();
+        private Target.Target tempTarget;
+
+        //Constructor
+        public TargetManager()
+        {
+            //TODO Add Jobs from XML to jobs
+            //TODO Add Fornames from XML to fornames
+            //TODO Add Lastnames from XML to lastnames
+            //TODO Add Origins from XML to origins
+        }
 
         /// <summary>
         /// Method which create new Targets and add them to the currentTargets
@@ -24,25 +37,25 @@ namespace Assets.Scripts.Managers
             {
                 if (i < nbr)
                 {
-                    tempTarget = new Target(type);
+                    tempTarget = new Target.Target(type);
                 }
                 else
                 {
-                    tempTarget = new Target();
+                    tempTarget = new Target.Target();
                 }
                 currentTargets.Add(tempTarget);
             }
             tempTarget = null;
-            Show();
+            ShowTargets();
         }
 
         /// <summary>
         /// Method which show the TargetScreen with all the currentTargets
         /// </summary>
-        public void Show()
+        public void ShowTargets()
         {
             targetScreenLoad.DrawBasicScreen();
-            foreach(Target target in currentTargets)
+            foreach(Target.Target target in currentTargets)
             {
                 targetScreenLoad.DrawTarget(target);
             }

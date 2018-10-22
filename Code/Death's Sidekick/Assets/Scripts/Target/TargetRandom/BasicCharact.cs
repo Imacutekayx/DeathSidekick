@@ -1,6 +1,8 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.Managers;
+using System.Collections.Generic;
+using UnityEngine;
 
-namespace Assets.Scripts.TargetScreen.TargetRandom
+namespace Assets.Scripts.Target.TargetRandom
 {
     /// <summary>
     /// Class creating the target's basic characteristics
@@ -20,7 +22,7 @@ namespace Assets.Scripts.TargetScreen.TargetRandom
         public BasicCharact(Target linkedTarget)
         {
             target = linkedTarget;
-            RandomName();
+            RandomFromXML();
             RandomAgeSex();
             RandomHeight();
             RandomWeight();
@@ -29,16 +31,42 @@ namespace Assets.Scripts.TargetScreen.TargetRandom
         /// <summary>
         /// Choose the name randomly
         /// </summary>
-        /// <param name="target">The target we are creating</param>
-        private void RandomName()
+        private void RandomFromXML()
         {
-            //TODO Random Name with XML
+            //Origin
+            target.origin = Globals.targetManager.origins[Random.Range(0, Globals.targetManager.origins.Count - 1)];
+
+            //Lastname
+            List<XML.Lastname> lastnames = new List<XML.Lastname>();
+            foreach(XML.Lastname lastname in Globals.targetManager.lastnames)
+            {
+                if(lastname.origin == target.origin)
+                {
+                    lastnames.Add(lastname);
+                }
+            }
+            target.lastname = lastnames[Random.Range(0, lastnames.Count - 1)];
+            lastnames = null;
+
+            //Forname
+            List<XML.Forname> fornames = new List<XML.Forname>();
+            foreach(XML.Forname forname in Globals.targetManager.fornames)
+            {
+                if(forname.origin == target.origin && forname.sex == target.sex)
+                {
+                    fornames.Add(forname);
+                }
+            }
+            target.forname = fornames[Random.Range(0, fornames.Count - 1)];
+            fornames = null;
+
+            //Job
+            target.job = Globals.targetManager.jobs[Random.Range(0, Globals.targetManager.jobs.Count - 1)];
         }
 
         /// <summary>
         /// Choose the age randomly
         /// </summary>
-        /// <param name="target">The target we are creating</param>
         private void RandomAgeSex()
         {
             target.age = Random.Range(4, 56);
@@ -49,7 +77,6 @@ namespace Assets.Scripts.TargetScreen.TargetRandom
         /// <summary>
         /// Choose the height randomly
         /// </summary>
-        /// <param name="target">The target we are creating</param>
         private void RandomHeight()
         {
             //Check if adult
@@ -184,7 +211,6 @@ namespace Assets.Scripts.TargetScreen.TargetRandom
         /// <summary>
         /// Choose the weight randomly
         /// </summary>
-        /// <param name="target">The target we are creating</param>
         private void RandomWeight()
         {
             if(target.age > 15)

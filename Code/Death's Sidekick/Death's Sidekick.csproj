@@ -311,9 +311,16 @@
     <Compile Include="Assets\Scripts\Load.cs" />
     <Compile Include="Assets\Scripts\Globals.cs" />
     <Compile Include="Assets\Scripts\Managers\EventManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\Managers\ScreenManager.cs" />
     <Compile Include="Assets\Scripts\Managers\TargetManager.cs" />
+    <Compile Include="Assets\Scripts\Player\Object.cs" />
+    <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\Player\Power.cs" />
+    <Compile Include="Assets\Scripts\Target\XML\Forname.cs" />
+    <Compile Include="Assets\Scripts\Target\XML\Job.cs" />
     <Compile Include="Assets\Scripts\Target\Link.cs" />
+    <Compile Include="Assets\Scripts\Target\XML\Lastname.cs" />
     <Compile Include="Assets\Scripts\Target\Other.cs" />
     <Compile Include="Assets\Scripts\Target\Target.cs" />
     <Compile Include="Assets\Scripts\Target\TargetRandom\BasicCharact.cs" />
@@ -333,6 +340,7 @@
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\PackageSearchFilterTabs.uxml" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\PackagesLoading.uxml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>

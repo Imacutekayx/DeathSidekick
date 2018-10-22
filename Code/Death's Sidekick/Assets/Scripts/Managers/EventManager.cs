@@ -11,7 +11,7 @@
         public void CreateNewWeek()
         {
             Globals.soulCrystal = false;
-            //TODO Create Events
+            //TODO Create Events and add small references to History Events (killers, events)
             switch (Globals.week)
             {
                 default:

@@ -14,5 +14,6 @@
         public static EventManager eventManager = new EventManager();
         public static TargetManager targetManager = new TargetManager();
         public static ScreenManager screenManager = new ScreenManager();
+        public static PlayerManager playerManager = new PlayerManager();
     }
 }
