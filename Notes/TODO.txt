@@ -1,0 +1,7 @@
+-Think about Objects	(Name, Price, TypeEffect, VelueEffect)			XML
+-Think about Jobs	(Name, Place, HourBeginning, HourFinishing)		XML
+-Think about Map								?XML
+-Think about Origin*								XML
+-Think about Lastname	(Lastname, Origin*)					XML
+-Think about Forname	(Forname, Origin*, Sex[MF])				XML
+-Think about Save								?XML
