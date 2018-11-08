@@ -1,4 +1,4 @@
-﻿namespace Assets.Scripts.Target.XML
+﻿namespace Assets.Scripts.Target.XMLTarget
 {
     /// <summary>
     /// Class which contains the informations of a Forname

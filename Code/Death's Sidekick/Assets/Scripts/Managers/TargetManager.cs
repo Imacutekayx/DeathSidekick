@@ -9,10 +9,10 @@ namespace Assets.Scripts.Managers
     {
         //Objects
         public List<Target.Target> currentTargets = new List<Target.Target>();
-        public List<Target.XML.Job> jobs = new List<Target.XML.Job>();
-        public List<Target.XML.Forname> fornames = new List<Target.XML.Forname>();
-        public List<Target.XML.Lastname> lastnames = new List<Target.XML.Lastname>();
-        public List<string> origins = new List<string>();
+        public List<Target.XMLTarget.Job> jobs = new List<Target.XMLTarget.Job>();
+        public List<Target.XMLTarget.Forname> fornames = new List<Target.XMLTarget.Forname>();
+        public List<Target.XMLTarget.Lastname> lastnames = new List<Target.XMLTarget.Lastname>();
+        public List<Target.XMLTarget.Origin> origins = new List<Target.XMLTarget.Origin>();
         private Target.TargetScreenLoad targetScreenLoad = new Target.TargetScreenLoad();
         private Target.Target tempTarget;
 

@@ -1,9 +1,9 @@
-﻿namespace Assets.Scripts.Player
+﻿namespace Assets.Scripts.Player.XMLPlayer
 {
     /// <summary>
     /// Class which contains an object's information
     /// </summary>
-    class Object
+    public class Object
     {
         //Variables
         public string name;

@@ -9,6 +9,7 @@
         //Variables
         public static int week = 1;
         public static bool soulCrystal = false;
+        public static bool summonCrystal = false;
 
         //Objects
         public static EventManager eventManager = new EventManager();

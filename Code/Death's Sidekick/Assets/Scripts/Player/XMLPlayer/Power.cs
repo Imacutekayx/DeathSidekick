@@ -1,9 +1,9 @@
-﻿namespace Assets.Scripts.Player
+﻿namespace Assets.Scripts.Player.XMLPlayer
 {
     /// <summary>
-    /// Class whch contains the informations of a power
+    /// Class which contains the informations of a power
     /// </summary>
-    class Power
+    public class Power
     {
         //Variables
         public string name;

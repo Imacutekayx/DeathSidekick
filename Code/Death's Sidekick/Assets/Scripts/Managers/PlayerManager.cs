@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace Assets.Scripts.Managers
 {
@@ -9,14 +10,16 @@ namespace Assets.Scripts.Managers
     {
         //Objects
         private Player.Player player = new Player.Player();
-        private List<Player.Object> lstBuyable = new List<Player.Object>();
-        private List<Player.Power> lstPowersLocked = new List<Player.Power>();
+        private List<Player.XMLPlayer.Object> lstBuyable = new List<Player.XMLPlayer.Object>();
+        private List<Player.XMLPlayer.Power> lstPowersLocked = new List<Player.XMLPlayer.Power>();
+        private List<Player.XMLPlayer.Summon> lstSummons = new List<Player.XMLPlayer.Summon>();
 
         //Constructor
         public PlayerManager()
         {
             //TODO Add each object not bought from XML to lstBuyable && Add each object bought from XML to Player.bag
             //TODO Add each power locked from XML to lstPowersLocked && Add each power unlocked from XML to Player.powers
+            //TODO Add each summon from XML to lstSummons
         }
 
         /// <summary>
@@ -41,7 +44,7 @@ namespace Assets.Scripts.Managers
         /// <param name="Name">Name of the item</param>
         public void AddToPlayerBag(string Name)
         {
-            foreach(Player.Object obj in lstBuyable)
+            foreach(Player.XMLPlayer.Object obj in lstBuyable)
             {
                 if(obj.name == Name)
                 {
@@ -57,8 +60,8 @@ namespace Assets.Scripts.Managers
         /// <param name="Name">Name of the object</param>
         public void UseObject(string Name)
         {
-            List<Player.Object> currentBag = player.ShowBag();
-            foreach(Player.Object obj in currentBag)
+            List<Player.XMLPlayer.Object> currentBag = player.ShowBag();
+            foreach(Player.XMLPlayer.Object obj in currentBag)
             {
                 if(obj.name == Name)
                 {
@@ -83,7 +86,7 @@ namespace Assets.Scripts.Managers
         /// <param name="Name">Name of the power</param>
         public void UnlockPower(string Name)
         {
-            foreach(Player.Power pow in lstPowersLocked)
+            foreach(Player.XMLPlayer.Power pow in lstPowersLocked)
             {
                 if(pow.name == Name)
                 {
@@ -106,8 +109,8 @@ namespace Assets.Scripts.Managers
         /// <param name="Name"></param>
         public void UsePower(string Name)
         {
-            List<Player.Power> currentPowers = player.ShowPowers();
-            foreach(Player.Power pow in currentPowers)
+            List<Player.XMLPlayer.Power> currentPowers = player.ShowPowers();
+            foreach(Player.XMLPlayer.Power pow in currentPowers)
             {
                 if(pow.name == Name)
                 {
@@ -115,6 +118,24 @@ namespace Assets.Scripts.Managers
                     player.UsedPower(pow);
                 }
             }
+        }
+
+        /// <summary>
+        /// Invoke a Summon
+        /// </summary>
+        public void Summon()
+        {
+            Player.XMLPlayer.Summon summon = lstSummons[Random.Range(0, lstSummons.Count - 1)];
+            summon.Invoke();
+        }
+
+        /// <summary>
+        /// Increment stat of the player
+        /// </summary>
+        /// <param name="name">Stat to train</param>
+        public void IncrementStat(string name)
+        {
+            player.IncrementStat(name);
         }
 
         /// <summary>

@@ -18,8 +18,8 @@ namespace Assets.Scripts.Player
         public bool skin;
 
         //Objects
-        private List<Object> bag = new List<Object>();
-        private List<Power> powers = new List<Power>();
+        private List<XMLPlayer.Object> bag = new List<XMLPlayer.Object>();
+        private List<XMLPlayer.Power> powers = new List<XMLPlayer.Power>();
 
         //Constructor
         public Player()
@@ -31,7 +31,7 @@ namespace Assets.Scripts.Player
         /// Add an item to the bag
         /// </summary>
         /// <param name="obj">Item to add</param>
-        public void AddToBag(Object obj)
+        public void AddToBag(XMLPlayer.Object obj)
         {
             bag.Add(obj);
         }
@@ -40,7 +40,7 @@ namespace Assets.Scripts.Player
         /// Return the current bag
         /// </summary>
         /// <returns>Bag</returns>
-        public List<Object> ShowBag()
+        public List<XMLPlayer.Object> ShowBag()
         {
             return bag;
         }
@@ -49,7 +49,7 @@ namespace Assets.Scripts.Player
         /// Put the used variable of an object to true
         /// </summary>
         /// <param name="obj"></param>
-        public void UsedObject(Object obj)
+        public void UsedObject(XMLPlayer.Object obj)
         {
             if (!obj.used)
             {
@@ -62,9 +62,9 @@ namespace Assets.Scripts.Player
         /// </summary>
         /// <param name="Name">Name of the object</param>
         /// <returns>Object removed</returns>
-        public Object RemoveFromBag(string Name)
+        public XMLPlayer.Object RemoveFromBag(string Name)
         {
-            foreach(Object obj in bag)
+            foreach(XMLPlayer.Object obj in bag)
             {
                 if(obj.name == Name)
                 {
@@ -80,7 +80,7 @@ namespace Assets.Scripts.Player
         /// Unlock a power
         /// </summary>
         /// <param name="obj">Power to unlock</param>
-        public void Unlock(Power pow)
+        public void Unlock(XMLPlayer.Power pow)
         {
             powers.Add(pow);
         }
@@ -89,7 +89,7 @@ namespace Assets.Scripts.Player
         /// Return the current powers
         /// </summary>
         /// <returns>Powers</returns>
-        public List<Power> ShowPowers()
+        public List<XMLPlayer.Power> ShowPowers()
         {
             return powers;
         }
@@ -98,9 +98,29 @@ namespace Assets.Scripts.Player
         /// Put the actualWaitTime of the power used to 0
         /// </summary>
         /// <param name="pow">Power used</param>
-        public void UsedPower(Power pow)
+        public void UsedPower(XMLPlayer.Power pow)
         {
             pow.actualWaitTime = 0;
+        }
+
+        /// <summary>
+        /// Increment stat of the Player
+        /// </summary>
+        /// <param name="name">Stat to train</param>
+        public void IncrementStat(string name)
+        {
+            switch (name)
+            {
+                //TODO Increment stat
+                case "strength":
+                    break;
+
+                case "speed":
+                    break;
+
+                case "stamina":
+                    break;
+            }
         }
 
         /// <summary>
@@ -108,7 +128,7 @@ namespace Assets.Scripts.Player
         /// </summary>
         public void NewWeek()
         {
-            foreach(Power pow in powers)
+            foreach(XMLPlayer.Power pow in powers)
             {
                 if(pow.actualWaitTime != pow.waitTime)
                 {
