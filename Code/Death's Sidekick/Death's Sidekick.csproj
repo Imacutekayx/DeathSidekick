@@ -318,6 +318,7 @@
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Player\XMLPlayer\Power.cs" />
     <Compile Include="Assets\Scripts\Player\XMLPlayer\Summon.cs" />
+    <Compile Include="Assets\Scripts\Target\XMLTarget\Area.cs" />
     <Compile Include="Assets\Scripts\Target\XMLTarget\Country.cs" />
     <Compile Include="Assets\Scripts\Target\XMLTarget\Forname.cs" />
     <Compile Include="Assets\Scripts\Target\XMLTarget\Job.cs" />

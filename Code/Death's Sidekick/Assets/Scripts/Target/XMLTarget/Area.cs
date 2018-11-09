@@ -3,23 +3,23 @@
 namespace Assets.Scripts.Target.XMLTarget
 {
     /// <summary>
-    /// Class which contains all the informations of an origin
+    /// Class which contains all the informations of an area
     /// </summary>
-    public class Origin
+    public class Area
     {
         //Variables
         string name;
         int nbr;
 
         //Objects
-        public List<Area> lstArea = new List<Area>();
+        public List<Country> lstCountries = new List<Country>();
 
         //Constructor
-        public Origin(string Name, int Nbr, List<Area> LstArea)
+        public Area(string Name, int Nbr, List<Country> LstCountries)
         {
             name = Name;
             nbr = Nbr;
-            lstArea = LstArea;
+            lstCountries = LstCountries;
         }
     }
 }
