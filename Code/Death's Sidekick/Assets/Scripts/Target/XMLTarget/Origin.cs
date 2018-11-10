@@ -8,8 +8,8 @@ namespace Assets.Scripts.Target.XMLTarget
     public class Origin
     {
         //Variables
-        string name;
-        int nbr;
+        public string name;
+        public int nbr;
 
         //Objects
         public List<Area> lstArea = new List<Area>();
@@ -19,7 +19,10 @@ namespace Assets.Scripts.Target.XMLTarget
         {
             name = Name;
             nbr = Nbr;
-            lstArea = LstArea;
+            foreach(Area area in LstArea)
+            {
+                lstArea.Add(area);
+            }
         }
     }
 }

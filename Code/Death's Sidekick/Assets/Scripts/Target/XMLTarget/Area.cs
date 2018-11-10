@@ -8,8 +8,8 @@ namespace Assets.Scripts.Target.XMLTarget
     public class Area
     {
         //Variables
-        string name;
-        int nbr;
+        public string name;
+        public int nbr;
 
         //Objects
         public List<Country> lstCountries = new List<Country>();
@@ -19,7 +19,10 @@ namespace Assets.Scripts.Target.XMLTarget
         {
             name = Name;
             nbr = Nbr;
-            lstCountries = LstCountries;
+            foreach (Country country in LstCountries)
+            {
+                lstCountries.Add(country);
+            }
         }
     }
 }

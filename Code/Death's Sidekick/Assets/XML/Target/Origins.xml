@@ -636,9 +636,9 @@
       <AName>
         South America
       </AName>
-        424386
+        
       <ANbr>
-
+        424386
       </ANbr>
 
       <Country>
@@ -1676,7 +1676,7 @@
       Europe
     </Name>
     <Nbr>
-
+      742050
     </Nbr>
 
     <Area>
@@ -1935,19 +1935,269 @@
       </AName>
 
       <ANbr>
-        
+        151981
       </ANbr>
-      </Area>
-  
+
+      <Country>
+        <CName>
+          Italy
+        </CName>
+
+        <CNbr>
+          59359
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Spain
+        </CName>
+
+        <CNbr>
+          46354
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Greece
+        </CName>
+
+        <CNbr>
+          11159
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Portugal
+        </CName>
+
+        <CNbr>
+          10329
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Serbia
+        </CName>
+
+        <CNbr>
+          8790
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Croatia
+        </CName>
+
+        <CNbr>
+          4189
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Bosnia and Herzegovina
+        </CName>
+
+        <CNbr>
+          3507
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Albania
+        </CName>
+
+        <CNbr>
+          2930
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Republic of Macedonia
+        </CName>
+
+        <CNbr>
+          2083
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Slovenia
+        </CName>
+
+        <CNbr>
+          2079
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Montenegro
+        </CName>
+
+        <CNbr>
+          628
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Malta
+        </CName>
+
+        <CNbr>
+          430
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Andorra
+        </CName>
+
+        <CNbr>
+          76
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Gibraltar
+        </CName>
+
+        <CNbr>
+          34
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          San Marino
+        </CName>
+
+        <CNbr>
+          33
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Vatican City
+        </CName>
+
+        <CNbr>
+          1
+        </CNbr>
+      </Country>
+    </Area>
+
     <Area>
       <AName>
         Western Europe
       </AName>
 
       <ANbr>
-        
+        193426
       </ANbr>
-      </Area>
+
+      <Country>
+        <CName>
+          Germany
+        </CName>
+
+        <CNbr>
+          82114
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          France
+        </CName>
+
+        <CNbr>
+          64979
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Netherland
+        </CName>
+
+        <CNbr>
+          17035
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Belgium
+        </CName>
+
+        <CNbr>
+          11429
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Austria
+        </CName>
+
+        <CNbr>
+          8735
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Switzerland
+        </CName>
+
+        <CNbr>
+          8476
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Luxembourg
+        </CName>
+
+        <CNbr>
+          583
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Monaco
+        </CName>
+
+        <CNbr>
+          38
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Liechtenstein
+        </CName>
+
+        <CNbr>
+          37
+        </CNbr>
+      </Country>
+    </Area>
   </Origin>
 
   <Origin>
@@ -1955,16 +2205,277 @@
       Oceania
     </Name>
     <Nbr>
-
+      40682
     </Nbr>
 
-    <Country>
-      <CName>
+    <Area>
+      <AName>
+        Australia and New Zealand
+      </AName>
 
-      </CName>
-      <CNbr>
+      <ANbr>
+        29155
+      </ANbr>
 
-      </CNbr>
-    </Country>
+      <Country>
+        <CName>
+          Australia
+        </CName>
+
+        <CNbr>
+          24450
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          New Zealand
+        </CName>
+
+        <CNbr>
+          4705
+        </CNbr>
+      </Country>
+    </Area>
+
+    <Area>
+      <AName>
+        Melanesia
+      </AName>
+
+      <ANbr>
+        10319
+      </ANbr>
+
+      <Country>
+        <CName>
+          Papua New Guinea
+        </CName>
+
+        <CNbr>
+          8251
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Fiji
+        </CName>
+
+        <CNbr>
+          905
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Solomon Islands
+        </CName>
+
+        <CNbr>
+          611
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          New Caledonia
+        </CName>
+
+        <CNbr>
+          276
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Vanuatu
+        </CName>
+
+        <CNbr>
+          276
+        </CNbr>
+      </Country>
+    </Area>
+
+    <Area>
+      <AName>
+        Micronesia
+      </AName>
+
+      <ANbr>
+        525
+      </ANbr>
+
+      <Country>
+        <CName>
+          Guam
+        </CName>
+
+        <CNbr>
+          164
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Kiribati
+        </CName>
+
+        <CNbr>
+          116
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Federated States of Micronesia
+        </CName>
+
+        <CNbr>
+          105
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Northern Mariana Islands
+        </CName>
+
+        <CNbr>
+          55
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Marshall Islands
+        </CName>
+
+        <CNbr>
+          53
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Palau
+        </CName>
+
+        <CNbr>
+          21
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Nauru
+        </CName>
+
+        <CNbr>
+          11
+        </CNbr>
+      </Country>
+    </Area>
+
+    <Area>
+      <AName>
+        Polynesia
+      </AName>
+
+      <ANbr>
+        683
+      </ANbr>
+
+      <Country>
+        <CName>
+          French Polynesia
+        </CName>
+
+        <CNbr>
+          283
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Samoa
+        </CName>
+
+        <CNbr>
+          196
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Tonga
+        </CName>
+
+        <CNbr>
+          108
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          American Samoa
+        </CName>
+
+        <CNbr>
+          55
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Cook Islands
+        </CName>
+
+        <CNbr>
+          17
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Wallis and Futuna
+        </CName>
+
+        <CNbr>
+          11
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Tuvalu
+        </CName>
+
+        <CNbr>
+          11
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Niue
+        </CName>
+
+        <CNbr>
+          1
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Tokelau
+        </CName>
+
+        <CNbr>
+          1
+        </CNbr>
+      </Country>
+    </Area>
   </Origin>
 </Origins>

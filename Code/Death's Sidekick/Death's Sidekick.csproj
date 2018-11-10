@@ -314,6 +314,7 @@
     <Compile Include="Assets\Scripts\Managers\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\Managers\ScreenManager.cs" />
     <Compile Include="Assets\Scripts\Managers\TargetManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\TargetManagerScripts\GetTargetXML.cs" />
     <Compile Include="Assets\Scripts\Player\XMLPlayer\Object.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Player\XMLPlayer\Power.cs" />

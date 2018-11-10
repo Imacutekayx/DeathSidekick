@@ -19,10 +19,7 @@ namespace Assets.Scripts.Managers
         //Constructor
         public TargetManager()
         {
-            //TODO Add Jobs from XML to jobs
-            //TODO Add Fornames from XML to fornames
-            //TODO Add Lastnames from XML to lastnames
-            //TODO Add Origins from XML to origins
+            TargetManagerScripts.GetTargetXML getTargetXML = new TargetManagerScripts.GetTargetXML();
         }
 
         /// <summary>

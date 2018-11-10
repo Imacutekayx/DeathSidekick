@@ -6,8 +6,8 @@
     public class Country
     {
         //Variables
-        string name;
-        int nbr;
+        public string name;
+        public int nbr;
 
         //Constructor
         public Country(string Name, int Nbr)
