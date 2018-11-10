@@ -10,14 +10,16 @@
         public string effect;
         public int waitTime;
         public int actualWaitTime;
+        public bool unlocked;
 
         //Constructor
-        public Power(string Name, string Effect, int WaitTime, int ActualWaitTime)
+        public Power(string Name, string Effect, int WaitTime, int ActualWaitTime, bool Unlocked)
         {
             name = Name;
             effect = Effect;
             waitTime = WaitTime;
             actualWaitTime = ActualWaitTime;
+            unlocked = Unlocked;
         }
     }
 }

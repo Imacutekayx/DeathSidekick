@@ -6,7 +6,7 @@
     public class Forname
     {
         //Variables
-        public bool sex;   //0 == Male / 1 == Female
+        public bool sex;   //true == Male / false == Female
         public string forname;
         public string origin;
 

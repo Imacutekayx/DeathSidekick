@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Objects>
-  <Object>
+<Items>
+  <Item>
     <Name>
 
     </Name>
@@ -13,8 +13,5 @@
     <ValueEffect>
 
     </ValueEffect>
-    <Used>
-
-    </Used>
-  </Object>
-</Objects>
+  </Item>
+</Items>

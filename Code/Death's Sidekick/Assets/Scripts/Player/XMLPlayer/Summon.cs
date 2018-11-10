@@ -6,13 +6,13 @@
     public class Summon
     {
         //Variables
-        string name;
-        string function;
-        string effect;
-        int nbrInvoked;
+        public string name;
+        public string function;
+        public string effect;
+        public int nbrInvoked;
 
         //Constructor
-        public Summon(string Name, string Function, string Effect, string SkinFolder, int NbrInvoked)
+        public Summon(string Name, string Function, string Effect, int NbrInvoked)
         {
             name = Name;
             function = Function;

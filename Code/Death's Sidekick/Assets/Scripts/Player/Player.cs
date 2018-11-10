@@ -18,7 +18,7 @@ namespace Assets.Scripts.Player
         public bool skin;
 
         //Objects
-        private List<XMLPlayer.Object> bag = new List<XMLPlayer.Object>();
+        private List<XMLPlayer.Item> bag = new List<XMLPlayer.Item>();
         private List<XMLPlayer.Power> powers = new List<XMLPlayer.Power>();
 
         //Constructor
@@ -31,7 +31,7 @@ namespace Assets.Scripts.Player
         /// Add an item to the bag
         /// </summary>
         /// <param name="obj">Item to add</param>
-        public void AddToBag(XMLPlayer.Object obj)
+        public void AddToBag(XMLPlayer.Item obj)
         {
             bag.Add(obj);
         }
@@ -40,7 +40,7 @@ namespace Assets.Scripts.Player
         /// Return the current bag
         /// </summary>
         /// <returns>Bag</returns>
-        public List<XMLPlayer.Object> ShowBag()
+        public List<XMLPlayer.Item> ShowBag()
         {
             return bag;
         }
@@ -49,7 +49,7 @@ namespace Assets.Scripts.Player
         /// Put the used variable of an object to true
         /// </summary>
         /// <param name="obj"></param>
-        public void UsedObject(XMLPlayer.Object obj)
+        public void UsedObject(XMLPlayer.Item obj)
         {
             if (!obj.used)
             {
@@ -62,14 +62,16 @@ namespace Assets.Scripts.Player
         /// </summary>
         /// <param name="Name">Name of the object</param>
         /// <returns>Object removed</returns>
-        public XMLPlayer.Object RemoveFromBag(string Name)
+        public XMLPlayer.Item RemoveFromBag(string Name)
         {
-            foreach(XMLPlayer.Object obj in bag)
+            foreach(XMLPlayer.Item obj in bag)
             {
                 if(obj.name == Name)
                 {
                     obj.used = false;
                     bag.Remove(obj);
+                    obj.inBag = false;
+                    obj.used = false;
                     return obj;
                 }
             }

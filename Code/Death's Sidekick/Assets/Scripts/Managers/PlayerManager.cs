@@ -10,16 +10,22 @@ namespace Assets.Scripts.Managers
     {
         //Objects
         private Player.Player player = new Player.Player();
-        private List<Player.XMLPlayer.Object> lstBuyable = new List<Player.XMLPlayer.Object>();
-        private List<Player.XMLPlayer.Power> lstPowersLocked = new List<Player.XMLPlayer.Power>();
-        private List<Player.XMLPlayer.Summon> lstSummons = new List<Player.XMLPlayer.Summon>();
+        public List<Player.XMLPlayer.Item> lstBuyable = new List<Player.XMLPlayer.Item>();
+        public List<Player.XMLPlayer.Power> lstPowersLocked = new List<Player.XMLPlayer.Power>();
+        public List<Player.XMLPlayer.Summon> lstSummons = new List<Player.XMLPlayer.Summon>();
 
         //Constructor
         public PlayerManager()
         {
-            //TODO Add each object not bought from XML to lstBuyable && Add each object bought from XML to Player.bag
-            //TODO Add each power locked from XML to lstPowersLocked && Add each power unlocked from XML to Player.powers
-            //TODO Add each summon from XML to lstSummons
+            PlayerManagerScripts.GetPlayerXML getPlayerXML = new PlayerManagerScripts.GetPlayerXML();
+        }
+
+        /// <summary>
+        /// Method which add each XML Object where it belongs in a saved game
+        /// </summary>
+        public void ContinueSave()
+        {
+            PlayerManagerScripts.ContinueSavePlayer continueSavePlayer = new PlayerManagerScripts.ContinueSavePlayer(player);
         }
 
         /// <summary>
@@ -44,12 +50,13 @@ namespace Assets.Scripts.Managers
         /// <param name="Name">Name of the item</param>
         public void AddToPlayerBag(string Name)
         {
-            foreach(Player.XMLPlayer.Object obj in lstBuyable)
+            foreach(Player.XMLPlayer.Item obj in lstBuyable)
             {
                 if(obj.name == Name)
                 {
                     player.AddToBag(obj);
                     lstBuyable.Remove(obj);
+                    obj.inBag = true;
                 }
             }
         }
@@ -60,13 +67,14 @@ namespace Assets.Scripts.Managers
         /// <param name="Name">Name of the object</param>
         public void UseObject(string Name)
         {
-            List<Player.XMLPlayer.Object> currentBag = player.ShowBag();
-            foreach(Player.XMLPlayer.Object obj in currentBag)
+            List<Player.XMLPlayer.Item> currentBag = player.ShowBag();
+            foreach(Player.XMLPlayer.Item obj in currentBag)
             {
                 if(obj.name == Name)
                 {
                     //TODO Use an object and add the Effect to the Player
                     player.UsedObject(obj);
+                    obj.used = true;
                 }
             }
         }
@@ -91,6 +99,8 @@ namespace Assets.Scripts.Managers
                 if(pow.name == Name)
                 {
                     player.Unlock(pow);
+                    pow.unlocked = true;
+                    pow.actualWaitTime = pow.waitTime;
                 }
             }
         }
@@ -126,6 +136,7 @@ namespace Assets.Scripts.Managers
         public void Summon()
         {
             Player.XMLPlayer.Summon summon = lstSummons[Random.Range(0, lstSummons.Count - 1)];
+            ++summon.nbrInvoked;
             summon.Invoke();
         }
 

@@ -3,7 +3,7 @@
     /// <summary>
     /// Class which contains an object's information
     /// </summary>
-    public class Object
+    public class Item
     {
         //Variables
         public string name;
@@ -11,15 +11,17 @@
         public string typeEffect;
         public int valueEffect;
         public bool used;
+        public bool inBag;
 
         //Constructor
-        public Object(string Name, double Price, string TypeEffect, int ValueEffect, bool Used)
+        public Item(string Name, double Price, string TypeEffect, int ValueEffect, bool Used, bool InBag)
         {
             name = Name;
             price = Price;
             typeEffect = TypeEffect;
             valueEffect = ValueEffect;
             used = Used;
+            inBag = InBag;
         }
     }
 }
