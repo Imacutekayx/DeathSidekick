@@ -1679,14 +1679,275 @@
 
     </Nbr>
 
-    <Country>
-      <CName>
+    <Area>
+      <AName>
+        Eastern Europe
+      </AName>
 
-      </CName>
-      <CNbr>
+      <ANbr>
+        292449
+      </ANbr>
 
-      </CNbr>
-    </Country>
+      <Country>
+        <CName>
+          Russia
+        </CName>
+
+        <CNbr>
+          143989
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Ukraine
+        </CName>
+
+        <CNbr>
+          44222
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Poland
+        </CName>
+
+        <CNbr>
+          38170
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Romania
+        </CName>
+
+        <CNbr>
+          19679
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Czech Republic
+        </CName>
+
+        <CNbr>
+          10618
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Hungary
+        </CName>
+
+        <CNbr>
+          9721
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Belarus
+        </CName>
+
+        <CNbr>
+          9468
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Bulgaria
+        </CName>
+
+        <CNbr>
+          7084
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Slovakia
+        </CName>
+
+        <CNbr>
+          5447
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Moldova
+        </CName>
+
+        <CNbr>
+          4051
+        </CNbr>
+      </Country>
+    </Area>
+  
+    <Area>
+      <AName>
+        Northern Europe
+      </AName>
+
+      <ANbr>
+        104194
+      </ANbr>
+    
+      <Country>
+        <CName>
+          United Kingdom
+        </CName>
+
+        <CNbr>
+          66181
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Sweden
+        </CName>
+
+        <CNbr>
+          9910
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Denmark
+        </CName>
+
+        <CNbr>
+          5733
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Finland
+        </CName>
+
+        <CNbr>
+          5523
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Norway
+        </CName>
+
+        <CNbr>
+          5305
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Ireland
+        </CName>
+
+        <CNbr>
+          4761
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Lithuania
+        </CName>
+
+        <CNbr>
+          2890
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Latvia
+        </CName>
+
+        <CNbr>
+          1949
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Estonia
+        </CName>
+
+        <CNbr>
+          1309
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Iceland
+        </CName>
+
+        <CNbr>
+          335
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Guernsey and Jersey
+        </CName>
+
+        <CNbr>
+          165
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Isle of Man
+        </CName>
+
+        <CNbr>
+          84
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Faroe Islands
+        </CName>
+
+        <CNbr>
+          49
+        </CNbr>
+      </Country>
+    </Area>
+  
+    <Area>
+      <AName>
+        Southern Europe
+      </AName>
+
+      <ANbr>
+        
+      </ANbr>
+      </Area>
+  
+    <Area>
+      <AName>
+        Western Europe
+      </AName>
+
+      <ANbr>
+        
+      </ANbr>
+      </Area>
   </Origin>
 
   <Origin>
