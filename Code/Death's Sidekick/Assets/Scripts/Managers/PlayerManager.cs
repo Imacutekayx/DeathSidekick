@@ -21,14 +21,6 @@ namespace Assets.Scripts.Managers
         }
 
         /// <summary>
-        /// Method which add each XML Object where it belongs in a saved game
-        /// </summary>
-        public void ContinueSave()
-        {
-            PlayerManagerScripts.ContinueSavePlayer continueSavePlayer = new PlayerManagerScripts.ContinueSavePlayer(player);
-        }
-
-        /// <summary>
         /// Show the buyable objects
         /// </summary>
         public void ShowBuyable()
@@ -39,9 +31,9 @@ namespace Assets.Scripts.Managers
         /// <summary>
         /// Show the current bag of the Player
         /// </summary>
-        public void ShowBag()
+        public List<Player.XMLPlayer.Item> ShowBag()
         {
-            //TODO Show the bag of the Player
+            return player.ShowBag();
         }
 
         /// <summary>
@@ -108,9 +100,9 @@ namespace Assets.Scripts.Managers
         /// <summary>
         /// Show the current powers of the Player
         /// </summary>
-        public void ShowPowers()
+        public List<Player.XMLPlayer.Power> ShowPowers()
         {
-            //TODO Show the powers of the Player
+            return player.ShowPowers();
         }
 
         /// <summary>

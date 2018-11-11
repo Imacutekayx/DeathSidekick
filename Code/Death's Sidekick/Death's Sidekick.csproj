@@ -311,8 +311,8 @@
     <Compile Include="Assets\Scripts\Load.cs" />
     <Compile Include="Assets\Scripts\Globals.cs" />
     <Compile Include="Assets\Scripts\Managers\EventManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\EventManagerScripts\Save.cs" />
     <Compile Include="Assets\Scripts\Managers\PlayerManager.cs" />
-    <Compile Include="Assets\Scripts\Managers\PlayerManagerScripts\ContinueSavePlayer.cs" />
     <Compile Include="Assets\Scripts\Managers\PlayerManagerScripts\GetPlayerXML.cs" />
     <Compile Include="Assets\Scripts\Managers\ScreenManager.cs" />
     <Compile Include="Assets\Scripts\Managers\TargetManager.cs" />
@@ -348,7 +348,6 @@
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\PackagesLoading.uxml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Assets\Scripts\Managers\EventManagerScripts\" />
     <Folder Include="Assets\Scripts\Managers\ScreenManagerScript\" />
     <Folder Include="Assets\Scripts\Player\NewFolder1\" />
   </ItemGroup>
