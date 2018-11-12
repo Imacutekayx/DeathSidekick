@@ -128,7 +128,7 @@ namespace Assets.Scripts.Player
         /// <summary>
         /// Increment the actualWaitTime of currently blocked powers
         /// </summary>
-        public void NewWeek()
+        public void NewSoul()
         {
             foreach(XMLPlayer.Power pow in powers)
             {

@@ -16,14 +16,16 @@ namespace Assets.Scripts.Target
         private int tempRnd;
 
         //Basic characteristics
-        public XML.Forname forname;
-        public XML.Lastname lastname;
+        public XMLTarget.Forname forname;
+        public XMLTarget.Lastname lastname;
         public int age;
         public bool sex;   //0 == Male / 1 == Female
         public int height;
         public int weight;
-        public XML.Job job;
+        public XMLTarget.Job job;
         public string origin;
+        public string area;
+        public string country;
 
         //Skin
         //TODO Skin

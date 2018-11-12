@@ -34,13 +34,64 @@ namespace Assets.Scripts.Target.TargetRandom
         private void RandomFromXML()
         {
             //Origin
-            target.origin = Globals.targetManager.origins[Random.Range(0, Globals.targetManager.origins.Count - 1)];
+            int tempTotal = 0;
+            int result;
+            int resultTotal = 0;
+            //Origin
+            foreach(XMLTarget.Origin origin in Globals.targetManager.origins)
+            {
+                tempTotal += origin.nbr;
+            }
+            result = Random.Range(1, tempTotal);
+            foreach(XMLTarget.Origin origin in Globals.targetManager.origins)
+            {
+                resultTotal += origin.nbr;
+                if(result <= resultTotal)
+                {
+                    //Area
+                    tempTotal = 0;
+                    resultTotal = 0;
+                    foreach(XMLTarget.Area area in origin.lstArea)
+                    {
+                        tempTotal += area.nbr;
+                    }
+                    result = Random.Range(1, tempTotal);
+                    foreach(XMLTarget.Area area in origin.lstArea)
+                    {
+                        resultTotal += area.nbr;
+                        if(result <= resultTotal)
+                        {
+                            //Country
+                            tempTotal = 0;
+                            resultTotal = 0;
+                            foreach(XMLTarget.Country country in area.lstCountries)
+                            {
+                                tempTotal += country.nbr;
+                            }
+                            result = Random.Range(1, tempTotal);
+                            foreach(XMLTarget.Country country in area.lstCountries)
+                            {
+                                resultTotal += country.nbr;
+                                if(result <= resultTotal)
+                                {
+                                    target.country = country.name;
+                                    continue;
+                                }
+                            }
+                            target.area = area.name;
+                            continue;
+                        }
+                    }
+                    target.origin = origin.name;
+                    continue;
+                }
+            }
 
             //Lastname
-            List<XML.Lastname> lastnames = new List<XML.Lastname>();
-            foreach(XML.Lastname lastname in Globals.targetManager.lastnames)
+            List<XMLTarget.Lastname> lastnames = new List<XMLTarget.Lastname>();
+            foreach(XMLTarget.Lastname lastname in Globals.targetManager.lastnames)
             {
-                if(lastname.origin == target.origin)
+                if(lastname.origin == target.area)
                 {
                     lastnames.Add(lastname);
                 }
@@ -49,10 +100,10 @@ namespace Assets.Scripts.Target.TargetRandom
             lastnames = null;
 
             //Forname
-            List<XML.Forname> fornames = new List<XML.Forname>();
-            foreach(XML.Forname forname in Globals.targetManager.fornames)
+            List<XMLTarget.Forname> fornames = new List<XMLTarget.Forname>();
+            foreach(XMLTarget.Forname forname in Globals.targetManager.fornames)
             {
-                if(forname.origin == target.origin && forname.sex == target.sex)
+                if(forname.origin == target.area && forname.sex == target.sex)
                 {
                     fornames.Add(forname);
                 }

@@ -294,13 +294,13 @@
       <Project>{6800202F-4402-D405-F8CB-03DC7BD78B92}</Project>
       <Name>UnityEditor.StandardEvents</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.PackageManagerUI.Editor.csproj">
-      <Project>{6877705C-FBD9-0C4F-5AFB-6FB431E5D39D}</Project>
-      <Name>Unity.PackageManagerUI.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
       <Project>{3A848AB7-9891-EDDA-D555-BF184C2F81F4}</Project>
       <Name>Unity.TextMeshPro.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.PackageManagerUI.Editor.csproj">
+      <Project>{6877705C-FBD9-0C4F-5AFB-6FB431E5D39D}</Project>
+      <Name>Unity.PackageManagerUI.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.csproj">
       <Project>{07A21C90-D344-AE1A-8456-9910C203B41A}</Project>
@@ -308,34 +308,41 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Load.cs" />
     <Compile Include="Assets\Scripts\Globals.cs" />
+    <Compile Include="Assets\Scripts\Load.cs" />
     <Compile Include="Assets\Scripts\Managers\EventManager.cs" />
-    <Compile Include="Assets\Scripts\Managers\EventManagerScripts\Save.cs" />
+    <Compile Include="Assets\Scripts\Managers\EventManagerScripts\Saving.cs" />
     <Compile Include="Assets\Scripts\Managers\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\Managers\PlayerManagerScripts\GetPlayerXML.cs" />
     <Compile Include="Assets\Scripts\Managers\ScreenManager.cs" />
     <Compile Include="Assets\Scripts\Managers\TargetManager.cs" />
     <Compile Include="Assets\Scripts\Managers\TargetManagerScripts\GetTargetXML.cs" />
-    <Compile Include="Assets\Scripts\Player\XMLPlayer\Item.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\Player\XMLPlayer\Item.cs" />
     <Compile Include="Assets\Scripts\Player\XMLPlayer\Power.cs" />
     <Compile Include="Assets\Scripts\Player\XMLPlayer\Summon.cs" />
-    <Compile Include="Assets\Scripts\Target\XMLTarget\Area.cs" />
-    <Compile Include="Assets\Scripts\Target\XMLTarget\Country.cs" />
-    <Compile Include="Assets\Scripts\Target\XMLTarget\Forname.cs" />
-    <Compile Include="Assets\Scripts\Target\XMLTarget\Job.cs" />
     <Compile Include="Assets\Scripts\Target\Link.cs" />
-    <Compile Include="Assets\Scripts\Target\XMLTarget\Lastname.cs" />
     <Compile Include="Assets\Scripts\Target\Other.cs" />
     <Compile Include="Assets\Scripts\Target\Target.cs" />
     <Compile Include="Assets\Scripts\Target\TargetRandom\BasicCharact.cs" />
     <Compile Include="Assets\Scripts\Target\TargetRandom\LinksTarget.cs" />
     <Compile Include="Assets\Scripts\Target\TargetRandom\SpaceCharact.cs" />
     <Compile Include="Assets\Scripts\Target\TargetScreenLoad.cs" />
+    <Compile Include="Assets\Scripts\Target\XMLTarget\Area.cs" />
+    <Compile Include="Assets\Scripts\Target\XMLTarget\Country.cs" />
+    <Compile Include="Assets\Scripts\Target\XMLTarget\Forname.cs" />
+    <Compile Include="Assets\Scripts\Target\XMLTarget\Job.cs" />
+    <Compile Include="Assets\Scripts\Target\XMLTarget\Lastname.cs" />
     <Compile Include="Assets\Scripts\Target\XMLTarget\Origin.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\XML\Player\Items.xml" />
+    <None Include="Assets\XML\Player\Powers.xml" />
+    <None Include="Assets\XML\Player\Summons.xml" />
+    <None Include="Assets\XML\Target\Fornames.xml" />
+    <None Include="Assets\XML\Target\Jobs.xml" />
+    <None Include="Assets\XML\Target\Lastnames.xml" />
+    <None Include="Assets\XML\Target\Origins.xml" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Dark.uss" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Light.uss" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\Alert.uxml" />
@@ -346,33 +353,6 @@
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\PackageManagerWindow.uxml" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\PackageSearchFilterTabs.uxml" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\PackagesLoading.uxml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assets\Scripts\Managers\ScreenManagerScript\" />
-    <Folder Include="Assets\Scripts\Player\NewFolder1\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Assets\XML\Player\Items.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Assets\XML\Player\Powers.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Assets\XML\Player\Summons.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Assets\XML\Target\Fornames.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Assets\XML\Target\Jobs.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Assets\XML\Target\Lastnames.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Assets\XML\Target\Origins.xml">
-      <SubType>Designer</SubType>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

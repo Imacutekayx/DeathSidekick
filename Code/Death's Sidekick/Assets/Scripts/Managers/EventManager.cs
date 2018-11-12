@@ -5,6 +5,9 @@
     /// </summary>
     public class EventManager
     {
+        //Objects
+        EventManagerScripts.Saving saving = new EventManagerScripts.Saving();
+
         /// <summary>
         /// Create a new Week
         /// </summary>
@@ -29,11 +32,31 @@
             {
                 //TODO GoodWeek scene
                 ++Globals.week;
+                Save();
+                CreateNewWeek();
             }
             else
             {
                 //TODO GameOver scene
+                Load();
             }
+        }
+
+        /// <summary>
+        /// Method which save the game
+        /// </summary>
+        public void Save()
+        {
+            saving.Save();
+        }
+
+        /// <summary>
+        /// Method which load a version of the game
+        /// </summary>
+        public void Load()
+        {
+            Save();
+            CreateNewWeek();
         }
     }
 }

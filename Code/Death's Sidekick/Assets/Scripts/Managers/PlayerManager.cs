@@ -144,9 +144,9 @@ namespace Assets.Scripts.Managers
         /// <summary>
         /// Add a new week
         /// </summary>
-        public void NewWeek()
+        public void NewSoul()
         {
-            player.NewWeek();
+            player.NewSoul();
         }
     }
 }

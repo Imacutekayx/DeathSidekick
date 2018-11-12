@@ -383,6 +383,13 @@
     <Compile Include="Packages\com.unity.textmeshpro\Scripts\Editor\TMPro_TexturePostProcessor.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\XML\Player\Items.xml" />
+    <None Include="Assets\XML\Player\Powers.xml" />
+    <None Include="Assets\XML\Player\Summons.xml" />
+    <None Include="Assets\XML\Target\Fornames.xml" />
+    <None Include="Assets\XML\Target\Jobs.xml" />
+    <None Include="Assets\XML\Target\Lastnames.xml" />
+    <None Include="Assets\XML\Target\Origins.xml" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Dark.uss" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Light.uss" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\Alert.uxml" />
