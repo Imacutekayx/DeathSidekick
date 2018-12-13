@@ -1,10 +1,23 @@
-﻿namespace Assets.Scripts.Managers
+﻿using Assets.Scripts.Managers;
+using UnityEngine;
+
+/// <summary>
+/// Class which manage all the actions between the user and the screen
+/// </summary>
+public class ScreenManager : MonoBehaviour
 {
-    /// <summary>
-    /// Class which manage the interaction of the Player with the screen
-    /// </summary>
-    public class ScreenManager
+    //Objects
+    public Camera mainCamera;
+    public TargetScreenManager targetScreen = new TargetScreenManager();
+
+    //Constructor
+    public ScreenManager()
     {
-        //TODO Manage the interaction of the Player with the screen and call the others Managers
+        mainCamera.orthographicSize = Globals.resolution / mainCamera.aspect;
+    }
+
+    public void ShowTarget()
+    {
+        targetScreen.ShowTarget();
     }
 }

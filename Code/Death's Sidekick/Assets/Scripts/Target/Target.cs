@@ -1,5 +1,6 @@
 ﻿using Assets.Scripts.Target.TargetRandom;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 namespace Assets.Scripts.Target
 {
@@ -29,7 +30,7 @@ namespace Assets.Scripts.Target
 
         //Skin
         //TODO Skin
-        public bool skin;
+        public Sprite skin;
 
         //Special characteristics
         public int speed;

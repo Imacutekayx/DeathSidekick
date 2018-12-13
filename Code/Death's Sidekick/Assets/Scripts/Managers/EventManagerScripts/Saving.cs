@@ -14,6 +14,7 @@ namespace Assets.Scripts.Managers.EventManagerScripts
         /// </summary>
         public void Save()
         {
+            //TODO Save informations in binary files
             //Creation of Doc
             new XDocument(
                 new XElement("Save",

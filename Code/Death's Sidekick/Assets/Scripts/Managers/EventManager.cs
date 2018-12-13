@@ -18,9 +18,10 @@
             switch (Globals.week)
             {
                 default:
-                    Globals.targetManager.Create();
                     break;
             }
+            //TargetManager
+            Globals.targetManager.NewWeek();
         }
 
         /// <summary>
