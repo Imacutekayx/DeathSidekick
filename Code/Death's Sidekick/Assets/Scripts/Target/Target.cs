@@ -1,5 +1,6 @@
 ﻿using Assets.Scripts.Target.TargetRandom;
 using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace Assets.Scripts.Target
