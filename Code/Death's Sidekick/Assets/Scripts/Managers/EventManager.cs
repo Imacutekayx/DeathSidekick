@@ -1,4 +1,6 @@
-﻿namespace Assets.Scripts.Managers
+﻿using UnityEngine;
+
+namespace Assets.Scripts.Managers
 {
     /// <summary>
     /// Class which manage all the specials events of the Game
@@ -21,6 +23,7 @@
                     break;
             }
             //TargetManager
+            Debug.Log("Eventmanager");
             Globals.targetManager.NewWeek();
         }
 

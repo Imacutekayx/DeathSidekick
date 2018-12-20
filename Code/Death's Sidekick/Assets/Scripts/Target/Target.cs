@@ -11,7 +11,7 @@ namespace Assets.Scripts.Target
     public class Target
     {
         //Objects
-        private List<Link> links;
+        private List<Link> links = new List<Link>();
 
         //Variables
         public bool inCouple = false;

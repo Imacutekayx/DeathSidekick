@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace Assets.Scripts.Managers
 {
@@ -22,7 +23,7 @@ namespace Assets.Scripts.Managers
         //Constructor
         public TargetManager()
         {
-            TargetManagerScripts.GetTargetXML getTargetXML = new TargetManagerScripts.GetTargetXML();
+            //TargetManagerScripts.GetTargetXML getTargetXML = new TargetManagerScripts.GetTargetXML();
         }
 
         /// <summary>
@@ -30,8 +31,9 @@ namespace Assets.Scripts.Managers
         /// </summary>
         /// <param name="type">Special Type</param>
         /// <param name="nbr">Number of specials types</param>
-        public void Create()
+        private void Create()
         {
+            Debug.Log("StartCreate");
             currentTargets.Clear();
             for (int i = 0; i < 5; ++i)
             {
@@ -46,6 +48,7 @@ namespace Assets.Scripts.Managers
                 currentTargets.Add(tempTarget);
             }
             tempTarget = null;
+            Debug.Log("EndCreate");
         }
         /// <summary>
         /// Method which change the values of type and nbr by the current week

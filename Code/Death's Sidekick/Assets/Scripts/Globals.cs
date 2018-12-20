@@ -1,4 +1,6 @@
-﻿namespace Assets.Scripts.Managers
+﻿using UnityEngine;
+
+namespace Assets.Scripts
 {
     /// <summary>
     /// Class which contains the globals objects and variables
@@ -13,9 +15,9 @@
         public static int resolution = 1290;
 
         //Objects
-        public static EventManager eventManager = new EventManager();
-        public static TargetManager targetManager = new TargetManager();
-        public static ScreenManager screenManager = new ScreenManager();
-        public static PlayerManager playerManager = new PlayerManager();
+        public static Managers.EventManager eventManager = new Managers.EventManager();
+        public static Managers.TargetManager targetManager = new Managers.TargetManager();
+        public static Managers.ScreenManager screenManager = new Managers.ScreenManager();
+        public static Managers.PlayerManager playerManager = new Managers.PlayerManager();
     }
 }

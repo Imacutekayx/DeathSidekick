@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Xml;
+using UnityEngine;
 
 namespace Assets.Scripts.Managers.TargetManagerScripts
 {
@@ -30,7 +31,7 @@ namespace Assets.Scripts.Managers.TargetManagerScripts
 
             //Open XML
             var xmldoc = new XmlDocument();
-            xmldoc.Load("../../../XML/Target/Jobs.XML");
+            xmldoc.Load("C:/Users/briandgr/Desktop/ProjectSidekick/Code/Death's Sidekick/Assets/XML/Target/Jobs.XML");
 
             //Get informations
             XmlNodeList jobs = xmldoc.GetElementsByTagName("Job");
@@ -59,7 +60,7 @@ namespace Assets.Scripts.Managers.TargetManagerScripts
 
             //Open XML
             var xmldoc = new XmlDocument();
-            xmldoc.Load("../../../XML/Target/Fornames.XML");
+            xmldoc.Load("C:/Users/briandgr/Desktop/ProjectSidekick/Code/Death's Sidekick/Assets/XML/Target/Fornames.XML");
 
             //Get informations
             XmlNodeList fornames = xmldoc.GetElementsByTagName("Forname");
@@ -90,7 +91,7 @@ namespace Assets.Scripts.Managers.TargetManagerScripts
 
             //Open XML
             var xmldoc = new XmlDocument();
-            xmldoc.Load("../../../XML/Target/Lastnames.XML");
+            xmldoc.Load("C:/Users/briandgr/Desktop/ProjectSidekick/Code/Death's Sidekick/Assets/XML/Target/Lastnames.XML");
 
             //Get informations
             XmlNodeList lastnames = xmldoc.GetElementsByTagName("Lastname");
@@ -119,7 +120,7 @@ namespace Assets.Scripts.Managers.TargetManagerScripts
 
             //Open XML
             var xmldoc = new XmlDocument();
-            xmldoc.Load("../../../XML/Target/Origins.XML");
+            xmldoc.Load("C:/Users/briandgr/Desktop/ProjectSidekick/Code/Death's Sidekick/Assets/XML/Target/Origins.XML");
 
             //Get informations
             XmlNodeList origins = xmldoc.GetElementsByTagName("Origin");
