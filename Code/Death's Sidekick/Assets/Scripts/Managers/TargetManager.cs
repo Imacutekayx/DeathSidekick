@@ -33,7 +33,6 @@ namespace Assets.Scripts.Managers
         /// <param name="nbr">Number of specials types</param>
         private void Create()
         {
-            Debug.Log("StartCreate");
             currentTargets.Clear();
             for (int i = 0; i < 5; ++i)
             {
@@ -48,7 +47,6 @@ namespace Assets.Scripts.Managers
                 currentTargets.Add(tempTarget);
             }
             tempTarget = null;
-            Debug.Log("EndCreate");
         }
         /// <summary>
         /// Method which change the values of type and nbr by the current week

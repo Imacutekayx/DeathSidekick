@@ -7,7 +7,6 @@ namespace Assets.Scripts
     /// </summary>
     public static class Globals
     {
-        //TODO Create Globals at the beginning of the Game
         //Variables
         public static int week = 1;
         public static bool soulCrystal = false;

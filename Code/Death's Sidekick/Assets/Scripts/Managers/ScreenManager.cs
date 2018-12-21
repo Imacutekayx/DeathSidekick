@@ -6,18 +6,18 @@ namespace Assets.Scripts.Managers
     /// <summary>
     /// Class which manage all the actions between the user and the screen
     /// </summary>
-    public class ScreenManager : MonoBehaviour
+    public class ScreenManager
     {
         //Objects
-        public Camera mainCamera;
-        public Canvas canvas;
-        public TargetScreenManager targetScreen = new TargetScreenManager();
-        public Sprite other;
+        public Camera mainCamera = Camera.current;
+        public Canvas canvas = new Canvas();
+        private ScreenManagerScripts.TargetScreenManager targetScreen = new ScreenManagerScripts.TargetScreenManager();
+        private Sprite other = Sprite.Create(new Texture2D(100, 100), new Rect(0,0,100,100), new Vector2(0,0));
 
         //Constructor
         public ScreenManager()
         {
-            mainCamera.orthographicSize = Globals.resolution / mainCamera.aspect;
+            
         }
 
         /// <summary>
@@ -25,7 +25,6 @@ namespace Assets.Scripts.Managers
         /// </summary>
         public void ShowTarget()
         {
-            Debug.Log("StartShow");
             targetScreen.ShowTarget(other);
         }
 

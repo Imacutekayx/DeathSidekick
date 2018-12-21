@@ -50,7 +50,7 @@ namespace Assets.Scripts.Target
             BasicCharact basic = new BasicCharact(this);
 
             //Create Special characteristics
-            SpaceCharact space = new SpaceCharact(this);
+            //SpaceCharact space = new SpaceCharact(this);
 
             //Create Links
             LinksTarget link = new LinksTarget(this);

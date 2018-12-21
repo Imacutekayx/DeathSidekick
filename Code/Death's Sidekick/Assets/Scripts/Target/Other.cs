@@ -5,7 +5,7 @@ namespace Assets.Scripts.Target
     /// <summary>
     /// Class object Other which is linked to a Target by a Link
     /// </summary>
-    public class Other : MonoBehaviour
+    public class Other
     {
 
         //Objects

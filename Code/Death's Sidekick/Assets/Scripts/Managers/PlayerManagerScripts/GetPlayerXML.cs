@@ -13,9 +13,9 @@ namespace Assets.Scripts.Managers.PlayerManagerScripts
         //Constructor of the class
         public GetPlayerXML()
         {
-            GetItems();
-            GetPowers();
-            GetSummons();
+            //GetItems();
+            //GetPowers();
+            //GetSummons();
         }
 
         /// <summary>

@@ -22,10 +22,10 @@ namespace Assets.Scripts.Target.TargetRandom
         public BasicCharact(Target linkedTarget)
         {
             target = linkedTarget;
-            RandomFromXML();
+            //RandomFromXML();
             RandomAgeSex();
-            RandomHeight();
-            RandomWeight();
+            //RandomHeight();
+            //RandomWeight();
         }
 
         /// <summary>

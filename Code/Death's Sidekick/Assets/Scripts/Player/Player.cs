@@ -21,12 +21,6 @@ namespace Assets.Scripts.Player
         private List<XMLPlayer.Item> bag = new List<XMLPlayer.Item>();
         private List<XMLPlayer.Power> powers = new List<XMLPlayer.Power>();
 
-        //Constructor
-        public Player()
-        {
-            //TODO Randomize skin
-        }
-
         /// <summary>
         /// Add an item to the bag
         /// </summary>

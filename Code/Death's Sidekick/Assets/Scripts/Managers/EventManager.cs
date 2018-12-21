@@ -8,7 +8,7 @@ namespace Assets.Scripts.Managers
     public class EventManager
     {
         //Objects
-        EventManagerScripts.Saving saving = new EventManagerScripts.Saving();
+        private EventManagerScripts.Saving saving = new EventManagerScripts.Saving();
 
         /// <summary>
         /// Create a new Week
@@ -23,7 +23,6 @@ namespace Assets.Scripts.Managers
                     break;
             }
             //TargetManager
-            Debug.Log("Eventmanager");
             Globals.targetManager.NewWeek();
         }
 

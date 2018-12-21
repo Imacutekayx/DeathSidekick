@@ -2,14 +2,19 @@
 using System.Collections.Generic;
 using Assets.Scripts;
 using UnityEngine;
+namespace Assets.Scripts
+{
+    public class Temp : MonoBehaviour
+    {
 
-public class Temp : MonoBehaviour {
+        public Camera main;
 
-	// Use this for initialization
-	void Start () {
-        Debug.Log("Temp");
-        Globals.eventManager.CreateNewWeek();
-        Debug.Log("EventEnd");
-        Globals.screenManager.ShowTarget();
-	}
+        // Use this for initialization
+        void Start()
+        {
+            main.orthographicSize = Globals.resolution / main.aspect;
+            Globals.eventManager.CreateNewWeek();
+            Globals.screenManager.ShowTarget();
+        }
+    }
 }

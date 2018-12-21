@@ -15,10 +15,11 @@ namespace Assets.Scripts.Managers.TargetManagerScripts
         //Constructor of the class
         public GetTargetXML()
         {
-            GetJobs();
-            GetFornames();
-            GetLastnames();
-            GetOrigins();
+            //TODO Fix path XML and reactive random Target
+            //GetJobs();
+            //GetFornames();
+            //GetLastnames();
+            //GetOrigins();
         }
 
         /// <summary>
