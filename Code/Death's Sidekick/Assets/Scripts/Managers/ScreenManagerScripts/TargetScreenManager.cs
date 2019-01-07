@@ -65,36 +65,48 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts
 
                 //TODO Fix positions
                 //Calculation of the position of the Image
-                a = UnityEngine.Random.Range(0, cases.Count - 1);
+                a = UnityEngine.Random.Range(0, cases.Count);
                 c = cases[a];
                 cases.Remove(cases[a]);
                 switch (c)
                 {
                     case 0:
+                        tempImage.rectTransform.sizeDelta = new Vector2(width / 8, height / 3);
+                        x = UnityEngine.Random.Range(0, 1);
+                        y = UnityEngine.Random.Range(0, 1);
+                        break;
+
                     case 1:
-                        tempImage.rectTransform.sizeDelta = new Vector2(width / 16, height / 18 * 3);
-                        x = UnityEngine.Random.Range(width / 16, width / 16 * 5);
-                        y = UnityEngine.Random.Range(height / 3 * 2 - height / 2, height / 18 * 15 - height / 2);
+                        tempImage.rectTransform.sizeDelta = new Vector2(width / 8, height / 3);
+                        x = UnityEngine.Random.Range(0, 1);
+                        y = UnityEngine.Random.Range(0, 1);
                         break;
 
                     case 2:
+                        tempImage.rectTransform.sizeDelta = new Vector2(width / 48 * 5, height/18 * 5);
+                        x = UnityEngine.Random.Range(0, 1);
+                        y = UnityEngine.Random.Range(0, 1);
+                        break;
+
                     case 3:
-                        tempImage.rectTransform.sizeDelta = new Vector2(width / 64 * 3, height / 72 * 9);
-                        x = UnityEngine.Random.Range(width / 16 * 2, width / 64 * 23);
-                        y = UnityEngine.Random.Range(height / 18 * 7 - height / 2, height / 36 * 17 - height / 2);
+                        tempImage.rectTransform.sizeDelta = new Vector2(width / 48 * 5, height / 18 * 5);
+                        x = UnityEngine.Random.Range(0, 1);
+                        y = UnityEngine.Random.Range(0, 1);
                         break;
 
                     case 4:
+                        tempImage.rectTransform.sizeDelta = new Vector2(width / 12, height / 9 * 2);
+                        x = UnityEngine.Random.Range(0, 1);
+                        y = UnityEngine.Random.Range(0, 1);
+                        break;
+
                     case 5:
-                        tempImage.rectTransform.sizeDelta = new Vector2(width / 48 * 2, height / 54 * 6);
-                        x = UnityEngine.Random.Range(width / 16 * 3, width / 32 * 13);
-                        y = UnityEngine.Random.Range(height / 18 * 3 - height / 2, height / 18 * 5 - height / 2);
+                        tempImage.rectTransform.sizeDelta = new Vector2(width / 12, height / 9 * 2);
+                        x = UnityEngine.Random.Range(width/8 + width / 24, width / 8 * 5 - width / 24);
+                        y = UnityEngine.Random.Range(height / 9 * 2 + height / 9, height / 3 * 2 - height / 9);
                         break;
                 }
-                if (c == 0 || c == 2 || c == 4)
-                {
-                    x -= width / 2;
-                }
+                Debug.Log(c + " : " + x + " & " + y);
                 tempImage.rectTransform.position = new Vector3(x, y, 2);
                 //Foreach link of the target
                 int j = 0;
@@ -123,6 +135,7 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts
 
                 //TODO Verify script
                 lstTargets[i].AddComponent<ScreenManagerScripts.TargetScript>();
+                lstTargets[i].GetComponent<ScreenManagerScripts.TargetScript>().enabled = true;
 
                 lstTargets[i].SetActive(true);
             }
@@ -149,33 +162,7 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts
                 tempImage = other.GetComponent<Image>();
 
                 int c = UnityEngine.Random.Range(0, 5);
-                switch (c)
-                {
-                    case 0:
-                    case 1:
-                        tempImage.rectTransform.sizeDelta = new Vector2(width / 16, height / 18 * 3);
-                        x = UnityEngine.Random.Range(width / 16, width / 16 * 5);
-                        y = UnityEngine.Random.Range(height / 3 * 2 - height / 2, height / 18 * 15 - height / 2);
-                        break;
-
-                    case 2:
-                    case 3:
-                        tempImage.rectTransform.sizeDelta = new Vector2(width / 64 * 3, height / 72 * 9);
-                        x = UnityEngine.Random.Range(width / 16 * 2, width / 64 * 23);
-                        y = UnityEngine.Random.Range(height / 18 * 7 - height / 2, height / 36 * 17 - height / 2);
-                        break;
-
-                    case 4:
-                    case 5:
-                        tempImage.rectTransform.sizeDelta = new Vector2(width / 48 * 2, height / 54 * 6);
-                        x = UnityEngine.Random.Range(width / 16 * 3, width / 32 * 13);
-                        y = UnityEngine.Random.Range(height / 18 * 3 - height / 2, height / 18 * 5 - height / 2);
-                        break;
-                }
-                if (c == 0 || c == 2 || c == 4)
-                {
-                    x -= width / 2;
-                }
+                //TODO Add dynamic positions
                 tempImage.rectTransform.position = new Vector3(x, y, 1);
                 other.SetActive(true);
 

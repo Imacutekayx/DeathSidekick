@@ -11,7 +11,7 @@ namespace Assets.Scripts
         public static int week = 1;
         public static bool soulCrystal = false;
         public static bool summonCrystal = false;
-        public static int resolution = 1290;
+        public static int resolution = 1290/2;
 
         //Objects
         public static Managers.EventManager eventManager = new Managers.EventManager();
