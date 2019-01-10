@@ -1,5 +1,6 @@
 ﻿using Assets.Scripts.Managers;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Assets.Scripts.Managers
 {
@@ -10,7 +11,8 @@ namespace Assets.Scripts.Managers
     {
         //Objects
         public Camera mainCamera = Camera.current;
-        public Canvas canvas = new Canvas();
+        public Canvas canvas;
+        public Image background;
         private ScreenManagerScripts.TargetScreenManager targetScreen = new ScreenManagerScripts.TargetScreenManager();
         private Sprite other = Sprite.Create(new Texture2D(100, 100), new Rect(0,0,100,100), new Vector2(0,0));
 
@@ -25,7 +27,8 @@ namespace Assets.Scripts.Managers
         /// </summary>
         public void ShowTarget()
         {
-            targetScreen.ShowTarget(other);
+            background.rectTransform.sizeDelta = new Vector2(0,0);
+            targetScreen.ShowTargets(other);
         }
 
         /// <summary>

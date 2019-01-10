@@ -13,6 +13,7 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts
         /// </summary>
         void OnMouseEnter()
         {
+            Debug.Log(this.name + " Enter");
             Assets.Scripts.Globals.screenManager.ShowLinksTargets(Convert.ToInt32(this.name), true);
         }
 
@@ -21,6 +22,7 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts
         /// </summary>
         void OnMouseExit()
         {
+            Debug.Log(this.name + " Exit");
             Assets.Scripts.Globals.screenManager.ShowLinksTargets(Convert.ToInt32(this.name), false);
         }
 
