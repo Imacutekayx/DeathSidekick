@@ -37,8 +37,6 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts
             //Variables
             int c;
             int a;
-            float x = 0;
-            float y = 0;
 
             //Objects
             List<byte> cases = new List<byte> { 0, 1, 2, 3, 4, 5 };
@@ -105,6 +103,31 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts
             {
                 lstTargets[i].transform.SetParent(Globals.screenManager.canvas.transform, false);
             }
+
+            //Create a button skip if possible
+            if(Globals.day != 1)
+            {
+                GameObject skip = new GameObject();
+                skip.AddComponent<Image>();
+                tempImage = skip.GetComponent<Image>();
+                tempImage.rectTransform.sizeDelta = new Vector2(width / 8, height / 9);
+                tempImage.color = Color.gray;
+                tempImage.rectTransform.position = new Vector2(width / 8 * 7, -(height / 9 * 8));
+                skip.AddComponent<BoxCollider2D>();
+                skip.GetComponent<BoxCollider2D>().size = tempImage.rectTransform.sizeDelta;
+                skip.transform.SetParent(Globals.screenManager.canvas.transform, false);
+                skip.AddComponent<SkipTarget>();
+            }
+        }
+
+        /// <summary>
+        /// Method which show the current target's info
+        /// </summary>
+        /// <param name="id">Id of the target</param>
+        /// <param name="secCanvas">Second canvas used to show the informations of the target</param>
+        public void ShowTargetInfos(int id, Canvas secCanvas)
+        {
+            //TODO Change value of children of secCanvas
         }
 
         /// <summary>

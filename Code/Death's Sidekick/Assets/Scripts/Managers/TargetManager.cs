@@ -13,6 +13,7 @@ namespace Assets.Scripts.Managers
         private int nbr = 0;
 
         //Objects
+        public Target.Target target;
         public List<Target.Target> currentTargets = new List<Target.Target>();
         public List<Target.XMLTarget.Job> jobs = new List<Target.XMLTarget.Job>();
         public List<Target.XMLTarget.Forname> fornames = new List<Target.XMLTarget.Forname>();
@@ -48,6 +49,7 @@ namespace Assets.Scripts.Managers
             }
             tempTarget = null;
         }
+
         /// <summary>
         /// Method which change the values of type and nbr by the current week
         /// </summary>

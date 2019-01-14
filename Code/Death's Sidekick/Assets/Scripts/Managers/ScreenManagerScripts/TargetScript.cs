@@ -13,8 +13,7 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts
         /// </summary>
         void OnMouseEnter()
         {
-            Debug.Log(this.name + " Enter");
-            Assets.Scripts.Globals.screenManager.ShowLinksTargets(Convert.ToInt32(this.name), true);
+            Assets.Scripts.Globals.screenManager.ShowContent("Links", this.name, true);
         }
 
         /// <summary>
@@ -22,8 +21,7 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts
         /// </summary>
         void OnMouseExit()
         {
-            Debug.Log(this.name + " Exit");
-            Assets.Scripts.Globals.screenManager.ShowLinksTargets(Convert.ToInt32(this.name), false);
+            Assets.Scripts.Globals.screenManager.ShowContent("Links", this.name, false);
         }
 
         /// <summary>
@@ -31,7 +29,11 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts
         /// </summary>
         void OnMouseDown()
         {
-            //TODO Screen with personnal infos of the target
+            if (!Globals.screenManager.secCanvas.activeSelf)
+            {
+                //TODO Screen with personnal infos of the target
+                Assets.Scripts.Globals.screenManager.ShowContent("Infos", this.name);
+            }
         }
     }
 }

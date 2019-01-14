@@ -6,8 +6,12 @@ using UnityEngine.UI;
 
 namespace Assets.Scripts
 {
+    /// <summary>
+    /// Class which represents the beginning of the Game
+    /// </summary>
     public class Temp : MonoBehaviour
     {
+        //GameObjects
         public Camera main;
         public Canvas canvas;
         public Image img;
@@ -20,7 +24,7 @@ namespace Assets.Scripts
             Globals.screenManager.canvas = canvas;
             Globals.screenManager.background = img;
             Globals.eventManager.CreateNewWeek();
-            Globals.screenManager.ShowTarget();
+            Globals.screenManager.NewScreen("targetScreen");
         }
     }
 }
