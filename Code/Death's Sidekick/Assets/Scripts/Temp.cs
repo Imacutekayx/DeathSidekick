@@ -14,7 +14,7 @@ namespace Assets.Scripts
         //GameObjects
         public Camera main;
         public Canvas canvas;
-        public Image img;
+        public Image back;
 
         // Use this for initialization
         void Start()
@@ -22,9 +22,8 @@ namespace Assets.Scripts
             main.orthographicSize = Globals.resolution / main.aspect;
             canvas.GetComponent<CanvasScaler>().referenceResolution = new Vector2(Globals.resolution*2, Globals.resolution / 8 * 9);
             Globals.screenManager.canvas = canvas;
-            Globals.screenManager.background = img;
+            Globals.screenManager.background = back;
             Globals.eventManager.CreateNewWeek();
-            Globals.screenManager.NewScreen("targetScreen");
         }
     }
 }

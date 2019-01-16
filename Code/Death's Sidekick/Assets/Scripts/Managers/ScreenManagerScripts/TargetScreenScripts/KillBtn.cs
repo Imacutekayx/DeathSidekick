@@ -16,6 +16,7 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts.TargetScreenScripts
         void OnMouseDown()
         {
             Globals.targetManager.target = Globals.targetManager.currentTargets[id];
+            //TODO Next Screen
         }
     }
 }

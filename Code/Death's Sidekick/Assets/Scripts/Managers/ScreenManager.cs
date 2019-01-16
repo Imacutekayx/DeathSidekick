@@ -12,12 +12,12 @@ namespace Assets.Scripts.Managers
     {
         //Variables
         //TargetScreen
-        private static float width = Globals.resolution;
-        private static float height = Globals.resolution / 16 * 9;
-        private static float contentWidth = width / 8 * 3;
-        private static float imageHeight = height / 9 * 7;
-        private static float textHeight = imageHeight / 6;
-        private static float xPosition = width / 16 + width / 16 * 3;
+        private static readonly float width = Globals.resolution;
+        private static readonly float height = Globals.resolution / 16 * 9;
+        private static readonly float contentWidth = width / 8 * 3;
+        private static readonly float imageHeight = height / 9 * 7;
+        private static readonly float textHeight = imageHeight / 6;
+        private static readonly float xPosition = width / 16 + width / 16 * 3;
 
         //Objects
         public Camera mainCamera = Camera.current;
@@ -77,119 +77,150 @@ namespace Assets.Scripts.Managers
             secCanvas.GetComponent<Canvas>().renderMode = RenderMode.WorldSpace;
             secCanvas.GetComponent<RectTransform>().sizeDelta = new Vector2(-(Globals.resolution), 0);
 
-            //TODO Finish adding objects
             //AddObjectsInCanvas
             //Back
-            GameObject back = new GameObject();
-            back.name = "Back";
+            GameObject back = new GameObject
+            {
+                name = "Back"
+            };
             Image tempImage = back.AddComponent<Image>();
             tempImage.rectTransform.sizeDelta = new Vector2(width, height * 2);
             tempImage.color = new Color(0.75f, 0.75f, 0.75f);
             back.transform.SetParent(secCanvas.transform, false);
 
             //Skin
-            GameObject skin = new GameObject();
-            skin.name = "Skin";
+            GameObject skin = new GameObject
+            {
+                name = "Skin"
+            };
             tempImage = skin.AddComponent<Image>();
             tempImage.rectTransform.sizeDelta = new Vector2(contentWidth, imageHeight);
             tempImage.rectTransform.position = new Vector2(xPosition - width / 2, height / 9 + imageHeight/2);
             skin.transform.SetParent(secCanvas.transform, false);
 
             //Name
-            GameObject name = new GameObject();
-            name.name = "Name";
+            GameObject name = new GameObject
+            {
+                name = "Name"
+            };
             PositionText(name.AddComponent<Text>(), false, 11);
             name.GetComponent<Text>().text = name.name;
             name.transform.SetParent(secCanvas.transform, false);
 
             //Origin
-            GameObject origin = new GameObject();
-            origin.name = "Origin";
+            GameObject origin = new GameObject
+            {
+                name = "Origin"
+            };
             PositionText(origin.AddComponent<Text>(), false, 9);
             origin.GetComponent<Text>().text = origin.name;
             origin.transform.SetParent(secCanvas.transform, false);
 
             //Age
-            GameObject age = new GameObject();
-            age.name = "Age";
+            GameObject age = new GameObject
+            {
+                name = "Age"
+            };
             PositionText(age.AddComponent<Text>(), false, 7);
             age.GetComponent<Text>().text = age.name;
             age.transform.SetParent(secCanvas.transform, false);
 
             //Sex
-            GameObject sex = new GameObject();
-            sex.name = "Sex";
+            GameObject sex = new GameObject
+            {
+                name = "Sex"
+            };
             PositionText(sex.AddComponent<Text>(), false, 5);
             sex.GetComponent<Text>().text = sex.name;
             sex.transform.SetParent(secCanvas.transform, false);
 
             //Height
-            GameObject targetHeight = new GameObject();
-            targetHeight.name = "Height";
+            GameObject targetHeight = new GameObject
+            {
+                name = "Height"
+            };
             PositionText(targetHeight.AddComponent<Text>(), false, 3);
             targetHeight.GetComponent<Text>().text = targetHeight.name;
             targetHeight.transform.SetParent(secCanvas.transform, false);
 
             //Weight
-            GameObject targetWeight = new GameObject();
-            targetWeight.name = "Weight";
+            GameObject targetWeight = new GameObject
+            {
+                name = "Weight"
+            };
             PositionText(targetWeight.AddComponent<Text>(), false, 1);
             targetWeight.GetComponent<Text>().text = targetWeight.name;
             targetWeight.transform.SetParent(secCanvas.transform, false);
 
             //Map
-            GameObject map = new GameObject();
-            map.name = "Map";
+            GameObject map = new GameObject
+            {
+                name = "Map"
+            };
             tempImage = map.AddComponent<Image>();
             tempImage.rectTransform.sizeDelta = new Vector2(contentWidth, imageHeight);
             tempImage.rectTransform.position = new Vector2(xPosition, -imageHeight/2);
             map.transform.SetParent(secCanvas.transform, false);
 
             //Speed
-            GameObject speed = new GameObject();
-            speed.name = "Speed";
+            GameObject speed = new GameObject
+            {
+                name = "Speed"
+            };
             PositionText(speed.AddComponent<Text>(), true, 11);
             speed.GetComponent<Text>().text = speed.name;
             speed.transform.SetParent(secCanvas.transform, false);
 
             //Strength
-            GameObject strength = new GameObject();
-            strength.name = "Strength";
+            GameObject strength = new GameObject
+            {
+                name = "Strength"
+            };
             PositionText(strength.AddComponent<Text>(), true, 9);
             strength.GetComponent<Text>().text = strength.name;
             strength.transform.SetParent(secCanvas.transform, false);
 
             //Stamina
-            GameObject stamina = new GameObject();
-            stamina.name = "Stamina";
+            GameObject stamina = new GameObject
+            {
+                name = "Stamina"
+            };
             PositionText(stamina.AddComponent<Text>(), true, 7);
             stamina.GetComponent<Text>().text = stamina.name;
             stamina.transform.SetParent(secCanvas.transform, false);
 
             //Reflex
-            GameObject reflex = new GameObject();
-            reflex.name = "Reflex";
+            GameObject reflex = new GameObject
+            {
+                name = "Reflex"
+            };
             PositionText(reflex.AddComponent<Text>(), true, 5);
             reflex.GetComponent<Text>().text = reflex.name;
             reflex.transform.SetParent(secCanvas.transform, false);
 
             //IQ
-            GameObject iq = new GameObject();
-            iq.name = "IQ";
+            GameObject iq = new GameObject
+            {
+                name = "IQ"
+            };
             PositionText(iq.AddComponent<Text>(), true, 3);
             iq.GetComponent<Text>().text = iq.name;
             iq.transform.SetParent(secCanvas.transform, false);
 
             //Anxiety
-            GameObject anxiety = new GameObject();
-            anxiety.name = "Anxiety";
+            GameObject anxiety = new GameObject
+            {
+                name = "Anxiety"
+            };
             PositionText(anxiety.AddComponent<Text>(), true, 1);
             anxiety.GetComponent<Text>().text = anxiety.name;
             anxiety.transform.SetParent(secCanvas.transform, false);
 
             //Quit
-            GameObject quit = new GameObject();
-            quit.name = "Quit";
+            GameObject quit = new GameObject
+            {
+                name = "Quit"
+            };
             tempImage = quit.AddComponent<Image>();
             tempImage.rectTransform.sizeDelta = new Vector2(contentWidth / 2, textHeight);
             tempImage.rectTransform.position = new Vector2(width / 4 - width / 2, height / 9 - height);
@@ -199,8 +230,10 @@ namespace Assets.Scripts.Managers
             quit.AddComponent<ScreenManagerScripts.TargetScreenScripts.QuitBtn>();
 
             //Kill
-            GameObject kill = new GameObject();
-            kill.name = "Kill";
+            GameObject kill = new GameObject
+            {
+                name = "Kill"
+            };
             tempImage = kill.AddComponent<Image>();
             tempImage.rectTransform.sizeDelta = new Vector2(contentWidth / 2, textHeight);
             tempImage.rectTransform.position = new Vector2(width / 4, height / 9 - height);
@@ -227,7 +260,7 @@ namespace Assets.Scripts.Managers
                 addingX = width / 2;
                 addingY = height / 9 * 8;
             }
-            //TODO Make default font arial
+            tempText.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
             tempText.resizeTextForBestFit = true;
             tempText.color = Color.black;
             tempText.rectTransform.sizeDelta = new Vector2(contentWidth, textHeight);

@@ -39,7 +39,7 @@ namespace Assets.Scripts.Target.TargetRandom
         private void RandomLinks()
         {
             //0-Friends
-            tempRnd = Random.Range(1, 200);
+            tempRnd = Random.Range(1, 201);
             if (tempRnd < 101)
             {
                 if ((target.age > 40 && tempRnd < 22) ||
@@ -57,7 +57,7 @@ namespace Assets.Scripts.Target.TargetRandom
             }
 
             //1-BestFriend
-            tempRnd = Random.Range(1, 200);
+            tempRnd = Random.Range(1, 201);
             if (tempRnd < 101)
             {
                 if ((target.age > 40 && tempRnd < 13) ||
@@ -72,7 +72,7 @@ namespace Assets.Scripts.Target.TargetRandom
             }
 
             //2-Family
-            tempRnd = Random.Range(1, 200);
+            tempRnd = Random.Range(1, 201);
             if (tempRnd < 101)
             {
                 if ((target.age > 40 && tempRnd < 13) ||
@@ -90,7 +90,7 @@ namespace Assets.Scripts.Target.TargetRandom
             }
 
             //4-Couple
-            tempRnd = Random.Range(1, 200);
+            tempRnd = Random.Range(1, 201);
             if (tempRnd < 101)
             {
                 if ((target.age > 40 && tempRnd < 85) ||
@@ -104,7 +104,7 @@ namespace Assets.Scripts.Target.TargetRandom
             }
 
             //3-Love
-            tempRnd = Random.Range(1, 200);
+            tempRnd = Random.Range(1, 201);
             if (target.inCouple)
             {
                 tempRnd = Random.Range(1, 600);
@@ -129,7 +129,7 @@ namespace Assets.Scripts.Target.TargetRandom
         /// <returns>Return the number of friends</returns>
         private int NumberFriends()
         {
-            tempRnd = Random.Range(1, 100);
+            tempRnd = Random.Range(1, 101);
 
             if (target.age > 40)
             {
@@ -244,7 +244,7 @@ namespace Assets.Scripts.Target.TargetRandom
         /// <returns>The number of members of the target's family</returns>
         private int NumberFamily()
         {
-            tempRnd = Random.Range(1, 100);
+            tempRnd = Random.Range(1, 101);
 
             if (target.age > 40)
             {
@@ -343,7 +343,7 @@ namespace Assets.Scripts.Target.TargetRandom
         /// <returns>Return the number of people concerned by love</returns>
         private int NumberLove()
         {
-            tempRnd = Random.Range(1, 100);
+            tempRnd = Random.Range(1, 101);
 
             if (target.age > 40)
             {

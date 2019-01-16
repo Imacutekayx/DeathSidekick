@@ -60,10 +60,10 @@
      <Compile Include="Assets\Scripts\Managers\PlayerManager.cs" />
      <Compile Include="Assets\Scripts\Managers\PlayerManagerScripts\GetPlayerXML.cs" />
      <Compile Include="Assets\Scripts\Managers\ScreenManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\ScreenManagerScripts\TargetScreenManager.cs" />
      <Compile Include="Assets\Scripts\Managers\ScreenManagerScripts\TargetScreenScripts\KillBtn.cs" />
      <Compile Include="Assets\Scripts\Managers\ScreenManagerScripts\TargetScreenScripts\QuitBtn.cs" />
      <Compile Include="Assets\Scripts\Managers\ScreenManagerScripts\TargetScreenScripts\SkipTarget.cs" />
-     <Compile Include="Assets\Scripts\Managers\ScreenManagerScripts\TargetScreenScripts\TargetScreenManager.cs" />
      <Compile Include="Assets\Scripts\Managers\ScreenManagerScripts\TargetScreenScripts\TargetScript.cs" />
      <Compile Include="Assets\Scripts\Managers\TargetManager.cs" />
      <Compile Include="Assets\Scripts\Managers\TargetManagerScripts\GetTargetXML.cs" />

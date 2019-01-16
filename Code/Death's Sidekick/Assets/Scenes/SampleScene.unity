@@ -443,7 +443,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   main: {fileID: 519420031}
   canvas: {fileID: 587068985}
-  img: {fileID: 295681413}
+  back: {fileID: 295681413}
 --- !u!1 &2012486883
 GameObject:
   m_ObjectHideFlags: 0

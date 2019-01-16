@@ -24,6 +24,7 @@ namespace Assets.Scripts.Managers
             }
             //TargetManager
             Globals.targetManager.NewWeek();
+            Globals.screenManager.NewScreen("targetScreen");
         }
 
         /// <summary>

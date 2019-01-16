@@ -13,7 +13,10 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts.TargetScreenScripts
         /// </summary>
         void OnMouseEnter()
         {
-            Assets.Scripts.Globals.screenManager.ShowContent("Links", this.name, true);
+            if (!Globals.screenManager.secCanvas.activeSelf)
+            {
+                Assets.Scripts.Globals.screenManager.ShowContent("Links", this.name, true);
+            }
         }
 
         /// <summary>
@@ -31,6 +34,8 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts.TargetScreenScripts
         {
             if (!Globals.screenManager.secCanvas.activeSelf)
             {
+                OnMouseExit();
+                Globals.screenManager.secCanvas.transform.Find("Kill").GetComponent<KillBtn>().id = Convert.ToInt32(this.name);
                 Assets.Scripts.Globals.screenManager.ShowContent("Infos", this.name);
             }
         }
