@@ -9,9 +9,9 @@ namespace Assets.Scripts.Player
     class Player
     {
         //Variables
-        private int strength = 25;
-        private int speed = 25;
-        private int stamina = 25;
+        public int strength = 25;
+        public int speed = 25;
+        public int stamina = 25;
         private double money;
 
         //Skin
@@ -107,7 +107,7 @@ namespace Assets.Scripts.Player
         {
             switch (name)
             {
-                //TODO Increment stat
+                //TODO Up stat
                 case "strength":
                     break;
 
@@ -116,6 +116,54 @@ namespace Assets.Scripts.Player
 
                 case "stamina":
                     break;
+            }
+
+            CheckStats();
+        }
+
+        /// <summary>
+        /// Method which add a certain amout of level to all the stats
+        /// </summary>
+        /// <param name="value">Value to add</param>
+        public void IncrementAll(int value)
+        {
+            strength += value;
+            speed += value;
+            stamina += value;
+
+            CheckStats();
+        }
+
+        /// <summary>
+        /// Method which check all stats to verify the limits
+        /// </summary>
+        private void CheckStats()
+        {
+            if(strength < 1)
+            {
+                strength = 1;
+            }
+            else if(strength > 100)
+            {
+                strength = 100;
+            }
+
+            if (speed < 1)
+            {
+                speed = 1;
+            }
+            else if (speed > 100)
+            {
+                speed = 100;
+            }
+
+            if (stamina < 1)
+            {
+                stamina = 1;
+            }
+            else if (stamina > 100)
+            {
+                stamina = 100;
             }
         }
 

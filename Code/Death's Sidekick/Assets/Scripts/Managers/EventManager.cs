@@ -16,12 +16,15 @@ namespace Assets.Scripts.Managers
         public void CreateNewWeek()
         {
             Globals.soulCrystal = false;
+            Globals.day = 1;
+            Globals.partOfDay = 0;
             //TODO Create Events and add small references to History Events (killers, events)
             switch (Globals.week)
             {
                 default:
                     break;
             }
+
             //TargetManager
             Globals.targetManager.NewWeek();
             Globals.screenManager.NewScreen("targetScreen");
@@ -59,7 +62,7 @@ namespace Assets.Scripts.Managers
         /// </summary>
         public void Load()
         {
-            Save();
+            saving.Load();
             CreateNewWeek();
         }
     }

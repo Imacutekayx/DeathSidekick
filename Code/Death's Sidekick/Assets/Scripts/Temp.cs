@@ -22,7 +22,10 @@ namespace Assets.Scripts
             main.orthographicSize = Globals.resolution / main.aspect;
             canvas.GetComponent<CanvasScaler>().referenceResolution = new Vector2(Globals.resolution*2, Globals.resolution / 8 * 9);
             Globals.screenManager.canvas = canvas;
+            Globals.screenManager.secCanvas = canvas.gameObject.transform.Find("SecCanvas").gameObject;
+            Globals.screenManager.secCanvas.GetComponent<Canvas>().renderMode = RenderMode.WorldSpace;
             Globals.screenManager.background = back;
+            Globals.screenManager.background.rectTransform.sizeDelta = new Vector2(0, 0);
             Globals.eventManager.CreateNewWeek();
         }
     }

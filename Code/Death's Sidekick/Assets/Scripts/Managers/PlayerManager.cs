@@ -142,6 +142,28 @@ namespace Assets.Scripts.Managers
         }
 
         /// <summary>
+        /// Method which add a status to the player and change stats
+        /// </summary>
+        /// <param name="name">Name of the status</param>
+        /// <param name="value">Enter or exit the status</param>
+        public void Status(string name, bool value)
+        {
+            switch (name)
+            {
+                case "Tired":
+                    if (value)
+                    {
+                        player.IncrementAll(-10);
+                    }
+                    else
+                    {
+                        player.IncrementAll(10);
+                    }
+                    break;
+            }
+        }
+
+        /// <summary>
         /// Add a new week
         /// </summary>
         public void NewSoul()

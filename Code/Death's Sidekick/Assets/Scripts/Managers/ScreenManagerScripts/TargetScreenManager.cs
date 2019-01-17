@@ -1,9 +1,7 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using Assets.Scripts;
-using System;
 
 namespace Assets.Scripts.Managers.ScreenManagerScripts
 {
@@ -14,20 +12,17 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts
     {
 
         //Variables
-        private int width;
-        private int height;
+        private static readonly float width = ScreenManager.width;
+        private static readonly float height = ScreenManager.height;
+        public static readonly float imageHeight = height / 9 * 7;
+        public readonly float contentWidth = width / 8 * 3;
+        public readonly float textHeight = imageHeight / 6;
+        public readonly float xPosition = width / 16 + width / 16 * 3;
 
         //Object
         private List<GameObject> lstTargets = new List<GameObject>();
         private List<List<GameObject>> lstOthers = new List<List<GameObject>>();
         private List<List<GameObject>> lstLinks = new List<List<GameObject>>();
-
-        //Constructor
-        public TargetScreenManager()
-        {
-            width = Globals.resolution;
-            height = width / 16 * 9;
-        }
 
         /// <summary>
         /// Method which show the current targets
@@ -107,7 +102,10 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts
             //Create a button skip if possible
             if (Globals.day != 1)
             {
-                GameObject skip = new GameObject();
+                GameObject skip = new GameObject
+                {
+                    name = "Skip"
+                };
                 skip.AddComponent<Image>();
                 tempImage = skip.GetComponent<Image>();
                 tempImage.rectTransform.sizeDelta = new Vector2(width / 8, height / 9);
@@ -116,7 +114,7 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts
                 skip.AddComponent<BoxCollider2D>();
                 skip.GetComponent<BoxCollider2D>().size = tempImage.rectTransform.sizeDelta;
                 skip.transform.SetParent(Globals.screenManager.canvas.transform, false);
-                skip.AddComponent<TargetScreenScripts.SkipTarget>();
+                skip.AddComponent<TargetScreenScripts.BtnTarget>();
             }
 
             Globals.screenManager.secCanvas.transform.SetAsLastSibling();
@@ -310,6 +308,25 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts
                     break;
             }
             tempImage.rectTransform.position = new Vector2(x, y);
+        }
+
+        /// <summary>
+        /// Method which position a text dynamically for the targetScreen
+        /// </summary>
+        /// <param name="tempText">Text to change</param>
+        /// <param name="minus">If the text is in the left bottom of the canvas</param>
+        /// <param name="nbr">position of the text next to the image</param>
+        public void PositionTargetText(Text tempText, bool minus, int nbr)
+        {
+            float addingX = 0;
+            float addingY = 0;
+            if (minus)
+            {
+                addingX = width / 2;
+                addingY = height / 9 * 8;
+            }
+            tempText.rectTransform.sizeDelta = new Vector2(contentWidth, textHeight);
+            tempText.rectTransform.position = new Vector2(xPosition - addingX, height / 9 + textHeight / 2 * nbr - addingY);
         }
     }
 }

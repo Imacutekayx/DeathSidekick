@@ -35,7 +35,7 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts.TargetScreenScripts
             if (!Globals.screenManager.secCanvas.activeSelf)
             {
                 OnMouseExit();
-                Globals.screenManager.secCanvas.transform.Find("Kill").GetComponent<KillBtn>().id = Convert.ToInt32(this.name);
+                Globals.screenManager.secCanvas.transform.Find("Kill").GetComponent<BtnTarget>().id = Convert.ToInt32(this.name);
                 Assets.Scripts.Globals.screenManager.ShowContent("Infos", this.name);
             }
         }

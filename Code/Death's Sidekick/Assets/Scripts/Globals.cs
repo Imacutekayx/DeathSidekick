@@ -9,7 +9,8 @@ namespace Assets.Scripts
     {
         //Variables
         public static int week = 1;
-        public static int day = 1;
+        public static byte day = 1;
+        public static byte partOfDay = 0;
         public static bool soulCrystal = false;
         public static bool summonCrystal = false;
         public static int resolution = 1290/2;
