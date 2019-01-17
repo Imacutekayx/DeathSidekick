@@ -30,7 +30,6 @@ namespace Assets.Scripts.Target
         public string country;
 
         //Skin
-        //TODO Skin
         public Sprite skin;
 
         //Special characteristics
@@ -38,7 +37,7 @@ namespace Assets.Scripts.Target
         public int strength;
         public int stamina;
         public int reflex;
-        public int iq;
+        public int intellect;
         public int anxiety;
 
         //Constructor

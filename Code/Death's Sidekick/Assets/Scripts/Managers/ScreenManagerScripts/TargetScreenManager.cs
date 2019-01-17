@@ -148,7 +148,7 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts
             secCanvas.transform.Find("Strength").GetComponent<Text>().text = "Strength: " + target.strength;
             secCanvas.transform.Find("Stamina").GetComponent<Text>().text = "Stamina: " + target.stamina;
             secCanvas.transform.Find("Reflex").GetComponent<Text>().text = "Reflex: " + target.reflex;
-            secCanvas.transform.Find("IQ").GetComponent<Text>().text = "IQ: " + target.iq;
+            secCanvas.transform.Find("Intellect").GetComponent<Text>().text = "Intellect: " + target.intellect;
             secCanvas.transform.Find("Anxiety").GetComponent<Text>().text = "Anxiety: " + target.anxiety;
 
             secCanvas.SetActive(true);

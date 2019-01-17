@@ -27,7 +27,7 @@ namespace Assets.Scripts.Managers
         private string currentScreen;
         private ScreenManagerScripts.TargetScreenManager targetScreen = new ScreenManagerScripts.TargetScreenManager();
         private Sprite other = Sprite.Create(new Texture2D(100, 100), new Rect(0,0,100,100), new Vector2(0,0));
-        //TODO Add images for each button and skin
+        //TODO Add images for each button and skins algos and sprites
 
         //Constructor
         public ScreenManager()
@@ -199,13 +199,13 @@ namespace Assets.Scripts.Managers
             reflex.transform.SetParent(secCanvas.transform, false);
 
             //IQ
-            GameObject iq = new GameObject
+            GameObject intellect = new GameObject
             {
-                name = "IQ"
+                name = "Intellect"
             };
-            PositionText(iq.AddComponent<Text>(), true, 3);
-            iq.GetComponent<Text>().text = iq.name;
-            iq.transform.SetParent(secCanvas.transform, false);
+            PositionText(intellect.AddComponent<Text>(), true, 3);
+            intellect.GetComponent<Text>().text = intellect.name;
+            intellect.transform.SetParent(secCanvas.transform, false);
 
             //Anxiety
             GameObject anxiety = new GameObject

@@ -16,6 +16,7 @@ namespace Assets.Scripts.Managers.TargetManagerScripts
         public GetTargetXML()
         {
             //TODO Fix path XML and reactive random Target
+            //TODO Create Student as Job
             //GetJobs();
             //GetFornames();
             //GetLastnames();

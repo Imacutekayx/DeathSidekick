@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace Assets.Scripts.Player
 {
@@ -14,8 +15,7 @@ namespace Assets.Scripts.Player
         private double money;
 
         //Skin
-        //TODO Skin
-        public bool skin;
+        public Sprite skin;
 
         //Objects
         private List<XMLPlayer.Item> bag = new List<XMLPlayer.Item>();

@@ -22,8 +22,8 @@ namespace Assets.Scripts.Target.TargetRandom
         public BasicCharact(Target linkedTarget)
         {
             target = linkedTarget;
-            //RandomFromXML();
             RandomAgeSex();
+            //RandomFromXML();
             RandomHeight();
             RandomWeight();
         }
@@ -120,6 +120,7 @@ namespace Assets.Scripts.Target.TargetRandom
         /// </summary>
         private void RandomAgeSex()
         {
+            //TODO Add student to younglings
             target.age = Random.Range(4, 57);
             if(target.age < 16)
             {
@@ -127,13 +128,13 @@ namespace Assets.Scripts.Target.TargetRandom
             }
             if(target.age < 16)
             {
-                //TODO Add School as job
+                
             }
             else if(target.age < 26)
             {
                 if(Random.Range(0, 4) != 3)
                 {
-                    //TODO Add Studies as job
+                    
                 }
             }
             tempRnd = Random.Range(0, 2);
