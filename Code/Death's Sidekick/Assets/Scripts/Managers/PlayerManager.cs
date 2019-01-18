@@ -23,9 +23,9 @@ namespace Assets.Scripts.Managers
         /// <summary>
         /// Show the buyable objects
         /// </summary>
-        public void ShowBuyable()
+        public List<Player.XMLPlayer.Item> ShowBuyable()
         {
-            //TODO Show the market
+            return lstBuyable;
         }
 
         /// <summary>
@@ -48,7 +48,6 @@ namespace Assets.Scripts.Managers
                 {
                     player.AddToBag(obj);
                     lstBuyable.Remove(obj);
-                    obj.inBag = true;
                 }
             }
         }
@@ -78,6 +77,25 @@ namespace Assets.Scripts.Managers
         public void RemoveFromPlayerBag(string Name)
         {
             lstBuyable.Add(player.RemoveFromBag(Name));
+        }
+
+        /// <summary>
+        /// Method which make all the changes between two days for the player
+        /// </summary>
+        public void DayPassed()
+        {
+            List<Player.XMLPlayer.Item> bag = ShowBag();
+            foreach(Player.XMLPlayer.Item item in bag)
+            {
+                if(item.days > 0)
+                {
+                    if(item.days == 1)
+                    {
+                        //TODO Notice the delivery
+                    }
+                    --item.days;
+                }
+            }
         }
 
         /// <summary>
@@ -127,7 +145,7 @@ namespace Assets.Scripts.Managers
         /// </summary>
         public void Summon()
         {
-            Player.XMLPlayer.Summon summon = lstSummons[Random.Range(0, lstSummons.Count - 1)];
+            Player.XMLPlayer.Summon summon = lstSummons[Random.Range(0, lstSummons.Count)];
             ++summon.nbrInvoked;
             summon.Invoke();
         }
@@ -136,9 +154,26 @@ namespace Assets.Scripts.Managers
         /// Increment stat of the player
         /// </summary>
         /// <param name="name">Stat to train</param>
-        public void IncrementStat(string name)
+        public void IncrementStat(int value, string name = "")
         {
-            player.IncrementStat(name);
+            if(name == "")
+            {
+                player.IncrementAll(value);
+            }
+            else
+            {
+                player.IncrementStat(name, value);
+            }
+        }
+
+        /// <summary>
+        /// Method which add the double in parameter to the current money of the player
+        /// </summary>
+        /// <param name="moneyToAdd">Money to add</param>
+        /// <returns>Current money</returns>
+        public double Money(double moneyToAdd = 0)
+        {
+            return player.money += moneyToAdd;
         }
 
         /// <summary>
@@ -151,14 +186,7 @@ namespace Assets.Scripts.Managers
             switch (name)
             {
                 case "Tired":
-                    if (value)
-                    {
-                        player.IncrementAll(-10);
-                    }
-                    else
-                    {
-                        player.IncrementAll(10);
-                    }
+                    player.IncrementAll(value ? -10 : 10);
                     break;
             }
         }

@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\Managers\ScreenManager.cs" />
      <Compile Include="Assets\Scripts\Managers\ScreenManagerScripts\HomeScreenManager.cs" />
      <Compile Include="Assets\Scripts\Managers\ScreenManagerScripts\HomeScreenScripts\ActionTrigger.cs" />
+     <Compile Include="Assets\Scripts\Managers\ScreenManagerScripts\HomeScreenScripts\BtnScript.cs" />
      <Compile Include="Assets\Scripts\Managers\ScreenManagerScripts\TargetScreenManager.cs" />
      <Compile Include="Assets\Scripts\Managers\ScreenManagerScripts\TargetScreenScripts\BtnTarget.cs" />
      <Compile Include="Assets\Scripts\Managers\ScreenManagerScripts\TargetScreenScripts\TargetScript.cs" />

@@ -34,8 +34,7 @@ namespace Assets.Scripts.Managers.PlayerManagerScripts
             XmlNodeList items = xmldoc.GetElementsByTagName("Item");
             foreach (XmlNode item in items)
             {
-                lstItem.Add(new Item(Normalize(item.SelectSingleNode("Name").InnerText), Convert.ToDouble(item.SelectSingleNode("Price").InnerText),
-                    Normalize(item.SelectSingleNode("TypeEffect").InnerText), Convert.ToInt32(item.SelectSingleNode("ValueEffect").InnerText), false, false));
+                lstItem.Add(new Item(Normalize(item.SelectSingleNode("Name").InnerText), Convert.ToDouble(item.SelectSingleNode("Price").InnerText), false, 3));
             }
 
             //Return lstBuyable

@@ -8,20 +8,16 @@
         //Variables
         public string name;
         public double price;
-        public string typeEffect;
-        public int valueEffect;
         public bool used;
-        public bool inBag;
+        public byte days;
 
         //Constructor
-        public Item(string Name, double Price, string TypeEffect, int ValueEffect, bool Used, bool InBag)
+        public Item(string Name, double Price, bool Used, byte Days)
         {
             name = Name;
             price = Price;
-            typeEffect = TypeEffect;
-            valueEffect = ValueEffect;
             used = Used;
-            inBag = InBag;
+            days = Days;
         }
     }
 }

@@ -9,10 +9,10 @@ namespace Assets.Scripts.Player
     class Player
     {
         //Variables
-        public int strength = 25;
         public int speed = 25;
+        public int strength = 25;
         public int stamina = 25;
-        private double money;
+        public double money;
 
         //Skin
         public Sprite skin;
@@ -63,9 +63,8 @@ namespace Assets.Scripts.Player
                 if(obj.name == Name)
                 {
                     obj.used = false;
+                    obj.days = 3;
                     bag.Remove(obj);
-                    obj.inBag = false;
-                    obj.used = false;
                     return obj;
                 }
             }
@@ -102,19 +101,22 @@ namespace Assets.Scripts.Player
         /// <summary>
         /// Increment stat of the Player
         /// </summary>
-        /// <param name="name">Stat to train</param>
-        public void IncrementStat(string name)
+        /// <param name="name">Stat to increment</param>
+        /// <param name="value">Value of the increment</param>
+        public void IncrementStat(string name, int value)
         {
             switch (name)
             {
-                //TODO Up stat
-                case "strength":
+                case "Speed":
+                    speed += value;
                     break;
 
-                case "speed":
+                case "Strength":
+                    strength += value;
                     break;
 
-                case "stamina":
+                case "Stamina":
+                    stamina += value;
                     break;
             }
 
@@ -127,8 +129,8 @@ namespace Assets.Scripts.Player
         /// <param name="value">Value to add</param>
         public void IncrementAll(int value)
         {
-            strength += value;
             speed += value;
+            strength += value;
             stamina += value;
 
             CheckStats();
@@ -139,15 +141,6 @@ namespace Assets.Scripts.Player
         /// </summary>
         private void CheckStats()
         {
-            if(strength < 1)
-            {
-                strength = 1;
-            }
-            else if(strength > 100)
-            {
-                strength = 100;
-            }
-
             if (speed < 1)
             {
                 speed = 1;
@@ -157,6 +150,15 @@ namespace Assets.Scripts.Player
                 speed = 100;
             }
 
+            if (strength < 1)
+            {
+                strength = 1;
+            }
+            else if(strength > 100)
+            {
+                strength = 100;
+            }
+            
             if (stamina < 1)
             {
                 stamina = 1;

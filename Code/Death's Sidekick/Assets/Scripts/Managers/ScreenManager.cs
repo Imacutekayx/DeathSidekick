@@ -66,7 +66,7 @@ namespace Assets.Scripts.Managers
         /// <param name="action">Kind of content to show</param>
         /// <param name="idContent">Id of the content</param>
         /// <param name="valueContent">Value applied to the content</param>
-        public void ShowContent(string action, string Content = "", bool valueContent = true)
+        public void ShowContent(string action, string Content = "", bool valueContent = true, float value = 0)
         {
             switch (currentScreen)
             {
@@ -75,7 +75,7 @@ namespace Assets.Scripts.Managers
                     break;
 
                 case "homeScreen":
-                    ShowHomeContent(action, Content);
+                    ShowHomeContent(action, Content, value);
                     break;
             }
         }
@@ -86,7 +86,7 @@ namespace Assets.Scripts.Managers
         private void ShowTargets()
         {
             //Set canvas properties
-            secCanvas.GetComponent<RectTransform>().sizeDelta = new Vector2(-(Globals.resolution), 0);
+            secCanvas.GetComponent<RectTransform>().sizeDelta = new Vector2(-width, 0);
 
             //AddObjectsInCanvas
             //Back
@@ -274,7 +274,6 @@ namespace Assets.Scripts.Managers
         private void ShowHome()
         {
             homeScreen.Initialise();
-            ShowContent("Update");
         }
 
         /// <summary>
@@ -302,66 +301,155 @@ namespace Assets.Scripts.Managers
         /// </summary>
         /// <param name="action">Action to do with the content of the screen</param>
         /// <param name="nameContent">name of the content</param>
-        private void ShowHomeContent(string action, string nameContent)
+        private void ShowHomeContent(string action, string nameContent, float valueContent)
         {
-            switch (action)
+            if(action == "Update")
             {
-                case "Work":
-                    ShowContent("Update");
-                    break;
-
-                case "Train":
-                    break;
-
-                case "Infos":
-                    break;
-
-                case "Sleep":
-                    homeScreen.sleeped = true;
-                    if (homeScreen.tired)
+                //Be called after each action and change value of date & pOfDay
+                if (Globals.day == 7 && Globals.partOfDay == 2)
+                {
+                    Globals.playerManager.IncrementStat(-5);
+                    Globals.eventManager.EndWeek();
+                }
+                else if (Globals.partOfDay == 2)
+                {
+                    ++Globals.day;
+                    Globals.partOfDay = 0;
+                    if (!homeScreen.sleeped && !homeScreen.tired)
                     {
-                        Globals.playerManager.Status("Tired", false);
-                        homeScreen.tired = false;
+                        Globals.playerManager.Status("Tired", true);
+                        homeScreen.tired = true;
                     }
-                    ShowContent("Update");
-                    break;
+                    homeScreen.sleeped = false;
+                }
+                else
+                {
+                    ++Globals.partOfDay;
+                }
 
-                case "Buy":
-                    break;
-
-                case "Bag":
-                    break;
-
-                case "Update":
-                    //Be called after each action and change value of date & pOfDay
-                    if(Globals.day == 7 && Globals.partOfDay == 2)
-                    {
-                        Globals.eventManager.EndWeek();
-                    }
-                    else if(Globals.partOfDay == 2)
-                    {
-                        ++Globals.day;
-                        Globals.partOfDay = 0;
-                        if(!homeScreen.sleeped && !homeScreen.tired)
+                homeScreen.UpdateTime();
+            }
+            else if (!secCanvas.activeSelf)
+            {
+                switch (action)
+                {
+                    //TODO Infos/Market/Bag
+                    case "Work":
+                        switch (Globals.partOfDay)
                         {
-                            Globals.playerManager.Status("Tired", true);
-                            homeScreen.tired = true;
+                            case 0:
+                                Globals.playerManager.Money(100);
+                                ++Globals.partOfDay;
+                                break;
+
+                            case 1:
+                                Globals.playerManager.Money(50);
+                                break;
+
+                            case 2:
+                                Globals.playerManager.Money(75);
+                                break;
                         }
-                        homeScreen.sleeped = false;
+                        ShowContent("Update");
+                        break;
 
-                        //TODO Down stats
-                    }
-                    else
-                    {
-                        ++Globals.partOfDay;
-                    }
+                    case "Train":
+                        if (homeScreen.actionType != "Train")
+                        {
+                            homeScreen.ShowTrain();
+                        }
+                        else
+                        {
+                            homeScreen.actionType = "";
+                            GameObject.Destroy(canvas.transform.Find("Speed").gameObject);
+                            GameObject.Destroy(canvas.transform.Find("Strength").gameObject);
+                            GameObject.Destroy(canvas.transform.Find("Stamina").gameObject);
+                        }
+                        break;
 
-                    //TODO Change value of time and day
-                    break;
+                    case "Infos":
+                        ClearSecCanvas();
 
-                case "Perso":
-                    //Show Infos of perso (clicking him depending of his position[after some animation])
-                    break;
+                        //Set canvas properties
+
+                        homeScreen.ShowInfos();
+                        secCanvas.SetActive(true);
+                        break;
+
+                    case "Sleep":
+                        homeScreen.sleeped = true;
+                        if (homeScreen.tired)
+                        {
+                            Globals.playerManager.Status("Tired", false);
+                            homeScreen.tired = false;
+                        }
+                        ShowContent("Update");
+                        break;
+
+                    case "Market":
+                       ClearSecCanvas();
+
+                        //Set canvas properties
+                        secCanvas.GetComponent<RectTransform>().sizeDelta = new Vector2();
+
+                       homeScreen.ShowMarket();
+                       secCanvas.SetActive(true);
+                        break;
+
+                    case "Bag":
+                        ClearSecCanvas();
+
+                        //Set canvas properties
+
+                        homeScreen.ShowBag();
+                        secCanvas.SetActive(true);
+                        break;
+
+                    case "Perso":
+                        ClearSecCanvas();
+
+                        //Set canvas properties
+
+                        //TODO Show Infos of perso (clicking him depending of his position[after some animation])
+                        secCanvas.SetActive(true);
+                        break;
+
+                    case "Summon":
+                        if (Globals.summonCrystal)
+                        {
+                            Globals.playerManager.Summon();
+                            ShowContent("Update");
+                        }
+                        break;
+                }
+            }
+            else
+            {
+                switch (action)
+                {
+                    //TODO Split the value of the float in integer less important
+                    case "Scroll":
+                        if(valueContent < 0f)
+                        {
+                            //DOWN
+                        }
+                        else
+                        {
+                            //UP
+                        }
+                        break;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Method which destroy the children of secCanvas
+        /// </summary>
+        private void ClearSecCanvas()
+        {
+            foreach (Transform child in secCanvas.transform)
+            {
+                GameObject.Destroy(child.gameObject);
             }
         }
         
@@ -369,7 +457,7 @@ namespace Assets.Scripts.Managers
         /// Method which set the basic properties of any Text component
         /// </summary>
         /// <param name="tempText">Text to set</param>
-        private void TextProperties(Text tempText)
+        public void TextProperties(Text tempText)
         {
             tempText.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
             tempText.resizeTextForBestFit = true;

@@ -15,7 +15,6 @@ namespace Assets.Scripts.Target
 
         //Variables
         public bool inCouple = false;
-        private int tempRnd;
 
         //Basic characteristics
         public XMLTarget.Forname forname;
@@ -39,6 +38,8 @@ namespace Assets.Scripts.Target
         public int reflex;
         public int intellect;
         public int anxiety;
+
+        //TODO Add List status to target &| player
 
         //Constructor
         public Target(string type = "base")
