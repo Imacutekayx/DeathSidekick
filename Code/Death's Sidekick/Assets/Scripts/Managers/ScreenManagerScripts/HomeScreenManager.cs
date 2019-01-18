@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -242,6 +243,105 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts
         {
             actionType = "market";
             List<Player.XMLPlayer.Item> market = Globals.playerManager.ShowBuyable();
+
+            //Back
+            GameObject back = new GameObject();
+            Image tempImage = back.AddComponent<Image>();
+            tempImage.color = Color.gray;
+            tempImage.rectTransform.sizeDelta = new Vector2(width, height * 2);
+            back.transform.SetParent(Globals.screenManager.secCanvas.transform, false);
+
+            //Market
+            GameObject pageMark = new GameObject
+            {
+                name = "PageMark"
+            };
+            tempImage = pageMark.AddComponent<Image>();
+            tempImage.rectTransform.sizeDelta = new Vector2(width / 2, height);
+            tempImage.rectTransform.position = new Vector2(-width / 4 * 3, height / 2);
+            BoxCollider2D tempBox = pageMark.AddComponent<BoxCollider2D>();
+            tempBox.size = tempImage.rectTransform.sizeDelta;
+            tempBox.transform.position = tempImage.rectTransform.position;
+            pageMark.AddComponent<ScreenManagerScripts.HomeScreenScripts.BtnScript>();
+            pageMark.transform.SetParent(Globals.screenManager.secCanvas.transform, false);
+
+            //History
+            GameObject pageHist = new GameObject
+            {
+                name = "PageHist"
+            };
+            tempImage = pageHist.AddComponent<Image>();
+            tempImage.rectTransform.sizeDelta = new Vector2(width / 2, height);
+            tempImage.rectTransform.position = new Vector2(-width / 4 * 3, -height / 2);
+            tempBox = pageHist.AddComponent<BoxCollider2D>();
+            tempBox.size = tempImage.rectTransform.sizeDelta;
+            tempBox.transform.position = tempImage.rectTransform.position;
+            pageHist.AddComponent<ScreenManagerScripts.HomeScreenScripts.BtnScript>();
+            pageHist.transform.SetParent(Globals.screenManager.secCanvas.transform, false);
+
+            //Close
+            GameObject close = new GameObject
+            {
+                name = "Close"
+            };
+            tempImage = close.AddComponent<Image>();
+            tempImage.rectTransform.sizeDelta = new Vector2(width / 8, height / 9 * 2);
+            tempImage.rectTransform.position = new Vector2(width / 16 * 15, height / 9 * 8);
+            tempBox = close.AddComponent<BoxCollider2D>();
+            tempBox.size = tempImage.rectTransform.sizeDelta;
+            tempBox.transform.position = tempImage.rectTransform.position;
+            close.AddComponent<ScreenManagerScripts.HomeScreenScripts.BtnScript>();
+            close.transform.SetParent(Globals.screenManager.secCanvas.transform, false);
+
+            //Skin
+            GameObject skin = new GameObject
+            {
+                name = "Skin"
+            };
+            tempImage = skin.AddComponent<Image>();
+            tempImage.rectTransform.sizeDelta = new Vector2(width / 8 * 2, height / 9 * 4);
+            tempImage.rectTransform.position = new Vector2(width / 4 * 3, height / 3);
+            skin.transform.SetParent(Globals.screenManager.secCanvas.transform, false);
+
+            //Name
+            GameObject name = new GameObject
+            {
+                name = "Name"
+            };
+            Text tempText = name.AddComponent<Text>();
+            tempText.rectTransform.sizeDelta = new Vector2(width / 8 * 2, height / 9 * 2);
+            tempText.rectTransform.position = new Vector2(width / 4 * 3, 0);
+            Globals.screenManager.TextProperties(tempText);
+            tempText.text = "Death";
+            name.transform.SetParent(Globals.screenManager.secCanvas.transform, false);
+
+            //Gold
+            GameObject gold = new GameObject
+            {
+                name = "Gold"
+            };
+            tempText = gold.AddComponent<Text>();
+            tempText.rectTransform.sizeDelta = new Vector2(width / 8, height / 9 * 2);
+            tempText.rectTransform.position = new Vector2(width / 16 * 11, -height / 3 * 2);
+            Globals.screenManager.TextProperties(tempText);
+            tempText.text = Convert.ToString(Globals.playerManager.Money());
+            gold.transform.SetParent(Globals.screenManager.secCanvas.transform, false);
+
+            //GoldSkin
+            GameObject goldSkin = new GameObject
+            {
+                name = "GoldSkin"
+            };
+            tempImage = goldSkin.AddComponent<Image>();
+            tempImage.rectTransform.sizeDelta = new Vector2(width / 8, height / 9 * 2);
+            tempImage.rectTransform.position = new Vector2(width / 16 * 13, -height / 3 * 2);
+            goldSkin.transform.SetParent(Globals.screenManager.secCanvas.transform, false);
+
+            //Items
+            for (int i = 0; i < 4; ++i)
+            {
+
+            }
         }
 
         /// <summary>

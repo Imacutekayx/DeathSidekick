@@ -21,6 +21,17 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts.HomeScreenScripts
                     Globals.playerManager.IncrementStat(5, this.name);
                     Globals.screenManager.ShowContent("Update");
                     break;
+
+                //TODO Change page
+                case "PageMark":
+                    break;
+
+                case "PageHist":
+                    break;
+
+                case "Close":
+                    Globals.screenManager.secCanvas.SetActive(false);
+                    break;
             }
         }
 

@@ -387,13 +387,13 @@ namespace Assets.Scripts.Managers
                         break;
 
                     case "Market":
-                       ClearSecCanvas();
+                        ClearSecCanvas();
 
                         //Set canvas properties
                         secCanvas.GetComponent<RectTransform>().sizeDelta = new Vector2();
 
-                       homeScreen.ShowMarket();
-                       secCanvas.SetActive(true);
+                        homeScreen.ShowMarket();
+                        secCanvas.SetActive(true);
                         break;
 
                     case "Bag":
@@ -433,7 +433,7 @@ namespace Assets.Scripts.Managers
                         {
                             //DOWN
                         }
-                        else
+                        else if(valueContent > 0f)
                         {
                             //UP
                         }
