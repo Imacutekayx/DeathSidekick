@@ -34,13 +34,13 @@ namespace Assets.Scripts.Managers.PlayerManagerScripts
             XmlNodeList items = xmldoc.GetElementsByTagName("Item");
             foreach (XmlNode item in items)
             {
-                lstItem.Add(new Item(Normalize(item.SelectSingleNode("Name").InnerText), Convert.ToDouble(item.SelectSingleNode("Price").InnerText), false, 3));
+                lstItem.Add(new Item(Normalize(item.SelectSingleNode("Name").InnerText), Convert.ToInt32(item.SelectSingleNode("Week").InnerText), Convert.ToDouble(item.SelectSingleNode("Price").InnerText), false, 3));
             }
 
             //Return lstBuyable
             foreach (Item item in lstItem)
             {
-                Globals.playerManager.lstBuyable.Add(item);
+                Globals.playerManager.lstItems.Add(item);
             }
             lstItem.Clear();
         }
@@ -61,8 +61,7 @@ namespace Assets.Scripts.Managers.PlayerManagerScripts
             XmlNodeList powers = xmldoc.GetElementsByTagName("Power");
             foreach (XmlNode power in powers)
             {
-                lstPowers.Add(new Power(Normalize(power.SelectSingleNode("Name").InnerText), Normalize(power.SelectSingleNode("Effect").InnerText), 
-                    Convert.ToInt32(power.SelectSingleNode("WaitTime").InnerText), 0, false));
+                lstPowers.Add(new Power(Normalize(power.SelectSingleNode("Name").InnerText), Convert.ToInt32(power.SelectSingleNode("Week").InnerText), Convert.ToInt32(power.SelectSingleNode("WaitTime").InnerText), 0));
             }
 
             //Return lstPowers

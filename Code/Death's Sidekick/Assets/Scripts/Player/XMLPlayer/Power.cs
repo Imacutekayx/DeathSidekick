@@ -7,19 +7,18 @@
     {
         //Variables
         public string name;
-        public string effect;
+        public int week;
         public int waitTime;
         public int actualWaitTime;
         public bool unlocked;
 
         //Constructor
-        public Power(string Name, string Effect, int WaitTime, int ActualWaitTime, bool Unlocked)
+        public Power(string Name, int Week, int WaitTime, int ActualWaitTime)
         {
             name = Name;
-            effect = Effect;
+            week = Week;
             waitTime = WaitTime;
             actualWaitTime = ActualWaitTime;
-            unlocked = Unlocked;
         }
     }
 }

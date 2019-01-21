@@ -148,7 +148,7 @@ namespace Assets.Scripts.Managers.EventManagerScripts
             foreach(string item in arrayItems)
             {
                 arrayItem = item.Split(',');
-                foreach(Player.XMLPlayer.Item buyable in Globals.playerManager.lstBuyable)
+                foreach(Player.XMLPlayer.Item buyable in Globals.playerManager.lstItems)
                 {
                     if(buyable.name == arrayItem[0])
                     {
@@ -180,11 +180,7 @@ namespace Assets.Scripts.Managers.EventManagerScripts
                 {
                     if (lockedPower.name == arrayPower[0])
                     {
-                        Globals.playerManager.UnlockPower(lockedPower.name);
-                        if (Convert.ToInt32(arrayPower[1]) == lockedPower.waitTime)
-                        {
-                            lockedPower.actualWaitTime = Convert.ToInt32(arrayPower[1]);
-                        }
+                        lockedPower.actualWaitTime = Convert.ToInt32(arrayPower[1]);
                         continue;
                     }
                 }

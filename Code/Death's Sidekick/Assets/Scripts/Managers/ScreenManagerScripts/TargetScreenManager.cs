@@ -10,7 +10,6 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts
     /// </summary>
     public class TargetScreenManager
     {
-
         //Variables
         private static readonly float width = ScreenManager.width;
         private static readonly float height = ScreenManager.height;

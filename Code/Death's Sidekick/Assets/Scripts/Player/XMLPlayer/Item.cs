@@ -7,14 +7,16 @@
     {
         //Variables
         public string name;
+        public int week;
         public double price;
         public bool used;
         public byte days;
 
         //Constructor
-        public Item(string Name, double Price, bool Used, byte Days)
+        public Item(string Name, int Week, double Price, bool Used, byte Days)
         {
             name = Name;
+            week = Week;
             price = Price;
             used = Used;
             days = Days;

@@ -25,7 +25,8 @@ namespace Assets.Scripts.Managers
                     break;
             }
 
-            //TargetManager
+            //Notice Managers
+            Globals.playerManager.NewWeek();
             Globals.targetManager.NewWeek();
             Globals.screenManager.NewScreen("targetScreen");
         }

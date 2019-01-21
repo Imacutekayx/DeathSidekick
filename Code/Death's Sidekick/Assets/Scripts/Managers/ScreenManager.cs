@@ -1,5 +1,6 @@
 ﻿using Assets.Scripts.Managers;
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -273,7 +274,7 @@ namespace Assets.Scripts.Managers
         /// </summary>
         private void ShowHome()
         {
-            homeScreen.Initialise();
+            homeScreen.Initialise(canvas.transform);
         }
 
         /// <summary>
@@ -333,7 +334,7 @@ namespace Assets.Scripts.Managers
             {
                 switch (action)
                 {
-                    //TODO Infos/Market/Bag
+                    //TODO Infos/Bag
                     case "Work":
                         switch (Globals.partOfDay)
                         {
@@ -391,8 +392,8 @@ namespace Assets.Scripts.Managers
 
                         //Set canvas properties
                         secCanvas.GetComponent<RectTransform>().sizeDelta = new Vector2();
-
-                        homeScreen.ShowMarket();
+                        
+                        homeScreen.ShowMarket(secCanvas.transform);
                         secCanvas.SetActive(true);
                         break;
 
@@ -427,15 +428,55 @@ namespace Assets.Scripts.Managers
             {
                 switch (action)
                 {
-                    //TODO Split the value of the float in integer less important
+                    case "LoadMarket":
+                        //TODO Fix History not Showing
+                        Debug.Log("LoadMarket");
+                        if (nameContent == "History")
+                        {
+                            List<Player.XMLPlayer.Item> hist = new List<Player.XMLPlayer.Item>();
+                            List<Player.XMLPlayer.Item> bag = Globals.playerManager.ShowBag();
+                            foreach (Player.XMLPlayer.Item inBag in bag)
+                            {
+                                if (inBag.days != 0)
+                                {
+                                    hist.Add(inBag);
+                                }
+                            }
+                            homeScreen.LoadMarket(hist, true, false);
+                        }
+                        else
+                        {
+                            homeScreen.LoadMarket(Globals.playerManager.lstBuyable, true);
+                        }
+                        break;
+
+                    case "Buy":
+                        Player.XMLPlayer.Item item = Globals.playerManager.lstBuyable[Convert.ToInt32(valueContent)];
+                        if (Globals.playerManager.Money() >= item.price)
+                        {
+                            Globals.playerManager.Money(-item.price);
+                            Globals.playerManager.AddToPlayerBag(item.name);
+                            homeScreen.LoadMarket(Globals.playerManager.lstBuyable);
+                        }
+                        break;
+
+                    //TODO ScrollEvent
                     case "Scroll":
                         if(valueContent < 0f)
                         {
                             //DOWN
+                            if(homeScreen.currentItem > Globals.playerManager.lstBuyable.Count)
+                            {
+                                //+2
+                            }
                         }
                         else if(valueContent > 0f)
                         {
                             //UP
+                            if(homeScreen.currentItem != 1)
+                            {
+                                //-2
+                            }
                         }
                         break;
                 }
@@ -445,7 +486,7 @@ namespace Assets.Scripts.Managers
         /// <summary>
         /// Method which destroy the children of secCanvas
         /// </summary>
-        private void ClearSecCanvas()
+        public void ClearSecCanvas()
         {
             foreach (Transform child in secCanvas.transform)
             {

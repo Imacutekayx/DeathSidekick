@@ -10,7 +10,10 @@ namespace Assets.Scripts.Managers
     {
         //Objects
         private Player.Player player = new Player.Player();
-        public List<Player.XMLPlayer.Item> lstBuyable = new List<Player.XMLPlayer.Item>();
+        public List<Player.XMLPlayer.Item> lstBuyable = new List<Player.XMLPlayer.Item> { new Player.XMLPlayer.Item("knife", 1, 50, false, 3), new Player.XMLPlayer.Item("gun", 1, 250, false, 3),
+            new Player.XMLPlayer.Item("sword", 1, 150, false, 3), new Player.XMLPlayer.Item("falcon punch", 1, 10, false, 3),new Player.XMLPlayer.Item("kamehameha", 1, 5000, false, 3),
+            new Player.XMLPlayer.Item("jsp", 1, 9999.95, false, 3), new Player.XMLPlayer.Item("item", 1, 0, false, 3), new Player.XMLPlayer.Item("imet", 1, 15, false, 3)};
+        public List<Player.XMLPlayer.Item> lstItems = new List<Player.XMLPlayer.Item>();
         public List<Player.XMLPlayer.Power> lstPowersLocked = new List<Player.XMLPlayer.Power>();
         public List<Player.XMLPlayer.Summon> lstSummons = new List<Player.XMLPlayer.Summon>();
 
@@ -48,6 +51,7 @@ namespace Assets.Scripts.Managers
                 {
                     player.AddToBag(obj);
                     lstBuyable.Remove(obj);
+                    return;
                 }
             }
         }
@@ -99,18 +103,41 @@ namespace Assets.Scripts.Managers
         }
 
         /// <summary>
+        /// Check change for the new week
+        /// </summary>
+        public void NewWeek()
+        {
+            UnlockPower();
+            UnlockItem();
+        }
+
+        /// <summary>
         /// Unlock a power for the Player
         /// </summary>
-        /// <param name="Name">Name of the power</param>
-        public void UnlockPower(string Name)
+        private void UnlockPower()
         {
             foreach(Player.XMLPlayer.Power pow in lstPowersLocked)
             {
-                if(pow.name == Name)
+                if(pow.week <= Globals.week)
                 {
                     player.Unlock(pow);
-                    pow.unlocked = true;
+                    lstPowersLocked.Remove(pow);
                     pow.actualWaitTime = pow.waitTime;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Put an item in the market
+        /// </summary>
+        private void UnlockItem()
+        {
+            foreach (Player.XMLPlayer.Item item in lstItems)
+            {
+                if (item.week <= Globals.week)
+                {
+                    lstBuyable.Add(item);
+                    lstItems.Remove(item);
                 }
             }
         }
