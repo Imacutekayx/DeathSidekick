@@ -14,6 +14,7 @@ namespace Assets.Scripts.Managers
             new Player.XMLPlayer.Item("sword", 1, 150, false, 3), new Player.XMLPlayer.Item("falcon punch", 1, 10, false, 3),new Player.XMLPlayer.Item("kamehameha", 1, 5000, false, 3),
             new Player.XMLPlayer.Item("jsp", 1, 9999.95, false, 3), new Player.XMLPlayer.Item("item", 1, 0, false, 3), new Player.XMLPlayer.Item("imet", 1, 15, false, 3)};
         public List<Player.XMLPlayer.Item> lstItems = new List<Player.XMLPlayer.Item>();
+        //TODO Create a wait list for items in delivery and check them in dayPassed before adding them to player.bag
         public List<Player.XMLPlayer.Power> lstPowersLocked = new List<Player.XMLPlayer.Power>();
         public List<Player.XMLPlayer.Summon> lstSummons = new List<Player.XMLPlayer.Summon>();
 
@@ -95,7 +96,7 @@ namespace Assets.Scripts.Managers
                 {
                     if(item.days == 1)
                     {
-                        //TODO Notice the delivery
+                        Debug.Log(item.name + " is delivered");
                     }
                     --item.days;
                 }

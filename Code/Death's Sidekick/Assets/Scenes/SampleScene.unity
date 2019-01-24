@@ -167,7 +167,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: c9bcdc35609fc804ab5e81c76a5da6b7, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -444,6 +444,8 @@ MonoBehaviour:
   main: {fileID: 519420031}
   canvas: {fileID: 587068985}
   back: {fileID: 295681413}
+  backTarget: {fileID: 21300000, guid: 8bfee52d99cd24d48ba8b564b1770320, type: 3}
+  backHome: {fileID: 21300000, guid: c9bcdc35609fc804ab5e81c76a5da6b7, type: 3}
 --- !u!1 &2012486883
 GameObject:
   m_ObjectHideFlags: 0

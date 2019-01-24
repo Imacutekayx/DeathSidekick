@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Assets.Scripts.Managers.ScreenManagerScripts.HomeScreenScripts
 {
@@ -30,16 +31,11 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts.HomeScreenScripts
                     break;
                     
                 case "PageMark":
-                    Debug.Log("Market");
-                    Globals.screenManager.secCanvas.transform.Find("PageHist").gameObject.AddComponent<ScreenManagerScripts.HomeScreenScripts.BtnScript>();
-                    Globals.screenManager.ShowContent("LoadMarket");
-                    Destroy(this.GetComponent<ScreenManagerScripts.HomeScreenScripts.BtnScript>());
-                    break;
-
                 case "PageHist":
-                    Debug.Log("History");
-                    Globals.screenManager.secCanvas.transform.Find("PageMark").gameObject.AddComponent<ScreenManagerScripts.HomeScreenScripts.BtnScript>();
-                    Globals.screenManager.ShowContent("LoadMarket", "History");
+                    Globals.screenManager.secCanvas.transform.Find(this.name == "PageMark" ? "PageHist" : "PageMark").gameObject.AddComponent<ScreenManagerScripts.HomeScreenScripts.BtnScript>();
+                    Globals.screenManager.secCanvas.transform.Find(this.name == "PageMark" ? "PageHist" : "PageMark").gameObject.GetComponent<Image>().color = Color.cyan;
+                    this.GetComponent<Image>().color = Color.gray;
+                    Globals.screenManager.ShowContent("LoadMarket", this.name == "PageHist" ? "History" : "");
                     Destroy(this.GetComponent<ScreenManagerScripts.HomeScreenScripts.BtnScript>());
                     break;
 
@@ -56,11 +52,10 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts.HomeScreenScripts
         /// </summary>
         void Update()
         {
-            if (this.name == "market" || this.name == "bag")
+            if (this.name == "Scroller")
             {
                 if (Input.GetAxis("Mouse ScrollWheel") != 0f) // Up
                 {
-                    Debug.Log("Scroll");
                     Globals.screenManager.ShowContent("Scroll", "", true, Input.GetAxis("Mouse ScrollWheel"));
                 }
             }

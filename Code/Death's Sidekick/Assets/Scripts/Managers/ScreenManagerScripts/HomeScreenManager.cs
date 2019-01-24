@@ -15,6 +15,7 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts
         private static readonly float width = ScreenManager.width;
         private static readonly float height = ScreenManager.height;
         public int currentItem = 0;
+        public List<Player.XMLPlayer.Item> currentMarket;    
         public string actionType;
         public bool sleeped = false;
         public bool tired = false;
@@ -244,7 +245,6 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts
         public void ShowMarket(Transform secCanvasTransform)
         {
             actionType = "market";
-            List<Player.XMLPlayer.Item> market = Globals.playerManager.ShowBuyable();
             
             //Back
             GameObject back = new GameObject();
@@ -253,12 +253,8 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts
             tempImage.rectTransform.sizeDelta = new Vector2(width * 2, height * 2);
             back.transform.SetParent(secCanvasTransform, false);
 
-            //Back Items
-            GameObject backItem = new GameObject();
-            tempImage = backItem.AddComponent<Image>();
-            tempImage.color = Color.gray;
-            tempImage.rectTransform.sizeDelta = new Vector2(width, height * 2);
-            backItem.transform.SetParent(secCanvasTransform, false);
+            //Items and close
+            AddItemsCloseAndScroll(secCanvasTransform);
 
             //Market
             GameObject pageMark = new GameObject
@@ -268,6 +264,7 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts
             tempImage = pageMark.AddComponent<Image>();
             tempImage.rectTransform.sizeDelta = new Vector2(width / 2, height);
             tempImage.rectTransform.position = new Vector2(-width / 4 * 3, height / 2);
+            tempImage.color = Color.gray;
             BoxCollider2D tempBox = pageMark.AddComponent<BoxCollider2D>();
             tempBox.size = tempImage.rectTransform.sizeDelta;
             tempBox.transform.position = tempImage.rectTransform.position;
@@ -281,25 +278,12 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts
             tempImage = pageHist.AddComponent<Image>();
             tempImage.rectTransform.sizeDelta = new Vector2(width / 2, height);
             tempImage.rectTransform.position = new Vector2(-width / 4 * 3, -height / 2);
+            tempImage.color = Color.cyan;
             tempBox = pageHist.AddComponent<BoxCollider2D>();
             tempBox.size = tempImage.rectTransform.sizeDelta;
             tempBox.transform.position = tempImage.rectTransform.position;
             pageHist.AddComponent<ScreenManagerScripts.HomeScreenScripts.BtnScript>();
             pageHist.transform.SetParent(secCanvasTransform, false);
-
-            //Close
-            GameObject close = new GameObject
-            {
-                name = "Close"
-            };
-            tempImage = close.AddComponent<Image>();
-            tempImage.rectTransform.sizeDelta = new Vector2(width / 8, height / 9 * 2);
-            tempImage.rectTransform.position = new Vector2(width / 16 * 15, height / 9 * 8);
-            tempBox = close.AddComponent<BoxCollider2D>();
-            tempBox.size = tempImage.rectTransform.sizeDelta;
-            tempBox.transform.position = tempImage.rectTransform.position;
-            close.AddComponent<ScreenManagerScripts.HomeScreenScripts.BtnScript>();
-            close.transform.SetParent(secCanvasTransform, false);
 
             //Skin
             GameObject skin = new GameObject
@@ -350,6 +334,108 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts
             //Items
             for (int i = 0; i < 4; ++i)
             {
+                //Price
+                GameObject priceItem = new GameObject
+                {
+                    name = "priceItem" + i
+                };
+                tempText = priceItem.AddComponent<Text>();
+                tempText.rectTransform.sizeDelta = new Vector2(width / 4, height / 9 * 2);
+                tempText.rectTransform.position = new Vector2(i == 0 || i == 2 ? -width / 4 : width / 4, i == 0 || i == 1 ? height / 9 * 2 : -height / 3 * 2);
+                Globals.screenManager.TextProperties(tempText);
+                tempText.alignment = TextAnchor.MiddleCenter;
+                priceItem.transform.SetParent(secCanvasTransform, false);
+            }
+
+            LoadMarket(Globals.playerManager.lstBuyable, true);
+        }
+
+        /// <summary>
+        /// Method which load the items in the market canvas
+        /// </summary>
+        /// <param name="market">Market to analyse</param>
+        /// <param name="changePage">Is it a new page?</param>
+        /// <param name="isMarket">Is it the market page?</param>
+        public void LoadMarket(List<Player.XMLPlayer.Item> market, bool changePage = false, bool isMarket = true)
+        {
+            currentMarket = market;
+
+            if (changePage)
+            {
+                currentItem = 0;
+            }
+
+            LoadItems(isMarket);
+
+            Globals.screenManager.secCanvas.transform.Find("Gold").GetComponent<Text>().text = Convert.ToString(Globals.playerManager.Money());
+        }
+
+        /// <summary>
+        /// Method which show the bag of the player and his items
+        /// </summary>
+        /// <param name="secCanvasTransform">Transform of the second canvas</param>
+        public void ShowBag(Transform secCanvasTransform)
+        {
+            actionType = "bag";
+            currentItem = 0;
+            currentMarket = Globals.playerManager.ShowBag();
+
+            //Items and close
+            AddItemsCloseAndScroll(secCanvasTransform);
+
+            for(int i = 0; i < 4; ++i)
+            {
+                GameObject drop = new GameObject
+                {
+                    name = "drop" + i
+                };
+                Image tempImage = drop.AddComponent<Image>();
+                tempImage.rectTransform.sizeDelta = new Vector2(width / 4, height / 9 * 2);
+                tempImage.rectTransform.position = new Vector2(i == 0 || i == 2 ? -width / 4 : width / 4, i == 0 || i == 1 ? height / 9 * 2 : -height / 3 * 2);
+                drop.transform.SetParent(secCanvasTransform, false);
+            }
+
+            LoadBag();
+        }
+
+        /// <summary>
+        /// Method which load the objects in the bag
+        /// </summary>
+        public void LoadBag()
+        {
+            LoadItems(false);
+        }
+
+        /// <summary>
+        /// Method which add the gameObjects linked to the items, the close btn and the scroll
+        /// </summary>
+        /// <param name="secCanvasTransform">Transform of the second canvas</param>
+        private void AddItemsCloseAndScroll(Transform secCanvasTransform)
+        {
+            //Back
+            GameObject back = new GameObject();
+            Image tempImage = back.AddComponent<Image>();
+            tempImage.color = Color.gray;
+            tempImage.rectTransform.sizeDelta = new Vector2(width, height * 2);
+            back.transform.SetParent(secCanvasTransform, false);
+
+            //Close
+            GameObject close = new GameObject
+            {
+                name = "Close"
+            };
+            tempImage = close.AddComponent<Image>();
+            tempImage.rectTransform.sizeDelta = new Vector2(width / 8, height / 9 * 2);
+            tempImage.rectTransform.position = new Vector2(actionType == "market" ? width / 16 * 15 : width / 8 * 7, height / 9 * 8);
+            BoxCollider2D tempBox = close.AddComponent<BoxCollider2D>();
+            tempBox.size = tempImage.rectTransform.sizeDelta;
+            tempBox.transform.position = tempImage.rectTransform.position;
+            close.AddComponent<ScreenManagerScripts.HomeScreenScripts.BtnScript>();
+            close.transform.SetParent(secCanvasTransform, false);
+
+            //Items
+            for (int i = 0; i < 4; ++i)
+            {
                 //Skin
                 GameObject skinItem = new GameObject
                 {
@@ -369,98 +455,74 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts
                 {
                     name = "nameItem" + i
                 };
-                tempText = nameItem.AddComponent<Text>();
+                Text tempText = nameItem.AddComponent<Text>();
                 tempText.rectTransform.sizeDelta = new Vector2(width / 4, height / 9 * 2);
                 tempText.rectTransform.position = new Vector2(i == 0 || i == 2 ? -width / 4 : width / 4, i == 0 || i == 1 ? height / 9 * 4 : -height / 9 * 4);
                 Globals.screenManager.TextProperties(tempText);
                 tempText.alignment = TextAnchor.MiddleCenter;
                 nameItem.transform.SetParent(secCanvasTransform, false);
-
-                //Price
-                GameObject priceItem = new GameObject
-                {
-                    name = "priceItem" + i
-                };
-                tempText = priceItem.AddComponent<Text>();
-                tempText.rectTransform.sizeDelta = new Vector2(width / 4, height / 9 * 2);
-                tempText.rectTransform.position = new Vector2(i == 0 || i == 2 ? -width / 4 : width / 4, i == 0 || i == 1 ? height / 9 * 2 : -height / 3 * 2);
-                Globals.screenManager.TextProperties(tempText);
-                tempText.alignment = TextAnchor.MiddleCenter;
-                priceItem.transform.SetParent(secCanvasTransform, false);
             }
 
-            LoadMarket(Globals.playerManager.lstBuyable);
+            AddScroller(secCanvasTransform);
         }
 
         /// <summary>
-        /// Method which load the items in the market canvas
+        /// Method which change the values of the items
         /// </summary>
-        /// <param name="valueAdd">value to add to the currentItem</param>
-        public void LoadMarket(List<Player.XMLPlayer.Item> market, bool changePage = false, bool isMarket = true, int valueAdd = 0)
+        /// <param name="isMarket">Is the page the market?</param>
+        private void LoadItems(bool isMarket)
         {
-            Debug.Log(market.Count);
-
-            if (changePage)
-            {
-                currentItem = 0;
-            }
-
             //Variables
             int currentObject = 0;
-
-            //Load value
-            currentItem += valueAdd;
-            for (int i = market.Count - currentItem; i > Globals.playerManager.lstBuyable.Count - currentItem - 4; --i)
+            for (int i = currentMarket.Count - currentItem; i > currentMarket.Count - currentItem - 4; --i)
             {
-                if(i > 0)
+                if (i > 0)
                 {
                     //Skin
                     GameObject skinItem = Globals.screenManager.secCanvas.transform.Find("skinItem" + currentObject).gameObject;
+                    skinItem.GetComponent<ScreenManagerScripts.HomeScreenScripts.BtnScript>().enabled = isMarket;
                     skinItem.GetComponent<ScreenManagerScripts.HomeScreenScripts.BtnScript>().id = i - 1;
                     skinItem.SetActive(true);
 
                     //Name
                     GameObject nameItem = Globals.screenManager.secCanvas.transform.Find("nameItem" + currentObject).gameObject;
-                    nameItem.GetComponent<Text>().text = market[i - 1].name;
+                    nameItem.GetComponent<Text>().text = currentMarket[i-1].used ? "Bloody" : "" + currentMarket[i - 1].name;
                     nameItem.SetActive(true);
 
-                    //Price
-                    GameObject priceItem = Globals.screenManager.secCanvas.transform.Find("priceItem" + currentObject).gameObject;
-                    priceItem.GetComponent<Text>().text = isMarket ? Convert.ToString(market[i - 1].price) : Convert.ToString(market[i - 1].days);
-                    priceItem.SetActive(true);
+                    if (actionType == "market")
+                    {
+                        //Price
+                        GameObject priceItem = Globals.screenManager.secCanvas.transform.Find("priceItem" + currentObject).gameObject;
+                        priceItem.GetComponent<Text>().text = isMarket ? Convert.ToString(currentMarket[i - 1].price) : Convert.ToString(currentMarket[i - 1].days);
+                        priceItem.SetActive(true);
+                    }
+                    else
+                    {
+                        Globals.screenManager.secCanvas.transform.Find("drop" + currentObject).gameObject.SetActive(true);
+                    }
                 }
                 else
                 {
                     Globals.screenManager.secCanvas.transform.Find("skinItem" + currentObject).gameObject.SetActive(false);
                     Globals.screenManager.secCanvas.transform.Find("nameItem" + currentObject).gameObject.SetActive(false);
-                    Globals.screenManager.secCanvas.transform.Find("priceItem" + currentObject).gameObject.SetActive(false);
+                    Globals.screenManager.secCanvas.transform.Find(actionType == "market" ? "priceItem" + currentObject : "drop" + currentObject).gameObject.SetActive(false);
                 }
                 ++currentObject;
             }
         }
 
         /// <summary>
-        /// Method which show the bag of the player and his items
+        /// Method adding a scroller which manage the different scrolls of the user
         /// </summary>
-        public void ShowBag()
+        /// <param name="secCanvas"></param>
+        private void AddScroller(Transform secCanvas)
         {
-
-        }
-        
-        /// <summary>
-        /// Method which put the items down
-        /// </summary>
-        public void ItemUp()
-        {
-
-        }
-
-        /// <summary>
-        /// Method which put the items down
-        /// </summary>
-        public void ItemDown()
-        {
-
+            GameObject scroller = new GameObject
+            {
+                name = "Scroller"
+            };
+            scroller.AddComponent<ScreenManagerScripts.HomeScreenScripts.BtnScript>();
+            scroller.transform.SetParent(secCanvas);
         }
     }
 }

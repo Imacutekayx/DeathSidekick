@@ -21,6 +21,8 @@ namespace Assets.Scripts.Managers
         public Canvas canvas;
         public GameObject secCanvas;
         public Image background;
+        public Sprite backTarget;
+        public Sprite backHome;
         private string currentScreen;
         private ScreenManagerScripts.TargetScreenManager targetScreen = new ScreenManagerScripts.TargetScreenManager();
         private ScreenManagerScripts.HomeScreenManager homeScreen = new ScreenManagerScripts.HomeScreenManager();
@@ -52,10 +54,12 @@ namespace Assets.Scripts.Managers
             switch (name)
             {
                 case "targetScreen":
+                    background.sprite = backTarget;
                     ShowTargets();
                     break;
 
                 case "homeScreen":
+                    background.sprite = backHome;
                     ShowHome();
                     break;
             }
@@ -322,6 +326,7 @@ namespace Assets.Scripts.Managers
                         homeScreen.tired = true;
                     }
                     homeScreen.sleeped = false;
+                    Globals.eventManager.EndDay();
                 }
                 else
                 {
@@ -334,7 +339,6 @@ namespace Assets.Scripts.Managers
             {
                 switch (action)
                 {
-                    //TODO Infos/Bag
                     case "Work":
                         switch (Globals.partOfDay)
                         {
@@ -372,6 +376,7 @@ namespace Assets.Scripts.Managers
                         ClearSecCanvas();
 
                         //Set canvas properties
+                        //TODO Infos
 
                         homeScreen.ShowInfos();
                         secCanvas.SetActive(true);
@@ -401,8 +406,9 @@ namespace Assets.Scripts.Managers
                         ClearSecCanvas();
 
                         //Set canvas properties
+                        secCanvas.GetComponent<RectTransform>().sizeDelta = new Vector2(-width, 0);
 
-                        homeScreen.ShowBag();
+                        homeScreen.ShowBag(secCanvas.transform);
                         secCanvas.SetActive(true);
                         break;
 
@@ -429,8 +435,6 @@ namespace Assets.Scripts.Managers
                 switch (action)
                 {
                     case "LoadMarket":
-                        //TODO Fix History not Showing
-                        Debug.Log("LoadMarket");
                         if (nameContent == "History")
                         {
                             List<Player.XMLPlayer.Item> hist = new List<Player.XMLPlayer.Item>();
@@ -459,24 +463,33 @@ namespace Assets.Scripts.Managers
                             homeScreen.LoadMarket(Globals.playerManager.lstBuyable);
                         }
                         break;
-
-                    //TODO ScrollEvent
+                        
                     case "Scroll":
                         if(valueContent < 0f)
                         {
                             //DOWN
-                            if(homeScreen.currentItem > Globals.playerManager.lstBuyable.Count)
+                            if(homeScreen.currentItem < homeScreen.currentMarket.Count-4)
                             {
-                                //+2
+                                homeScreen.currentItem += 2;
                             }
                         }
                         else if(valueContent > 0f)
                         {
                             //UP
-                            if(homeScreen.currentItem != 1)
+                            if (homeScreen.currentItem > 1)
                             {
-                                //-2
+                                homeScreen.currentItem -= 2;
                             }
+                        }
+
+                        //Market or Bag
+                        if(homeScreen.actionType == "market")
+                        {
+                            homeScreen.LoadMarket(homeScreen.currentMarket, false, secCanvas.transform.Find("PageMark").GetComponent<Image>().color == Color.gray);
+                        }
+                        else
+                        {
+                            homeScreen.LoadBag();
                         }
                         break;
                 }

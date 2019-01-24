@@ -51,6 +51,14 @@ namespace Assets.Scripts.Managers
         }
 
         /// <summary>
+        /// Method which notice the other managers when a day passed
+        /// </summary>
+        public void EndDay()
+        {
+            Globals.playerManager.DayPassed();
+        }
+
+        /// <summary>
         /// Method which save the game
         /// </summary>
         public void Save()
