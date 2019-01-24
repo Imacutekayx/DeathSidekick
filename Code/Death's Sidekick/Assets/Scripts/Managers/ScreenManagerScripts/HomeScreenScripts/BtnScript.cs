@@ -21,29 +21,36 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts.HomeScreenScripts
             {
                 Globals.screenManager.ShowContent("Buy", "", false, id);
             }
-            switch (this.name)
+            else if (this.name.Contains("drop"))
             {
-                case "Speed":
-                case "Strength":
-                case "Stamina":
-                    Globals.playerManager.IncrementStat(5, this.name);
-                    Globals.screenManager.ShowContent("Update");
-                    break;
-                    
-                case "PageMark":
-                case "PageHist":
-                    Globals.screenManager.secCanvas.transform.Find(this.name == "PageMark" ? "PageHist" : "PageMark").gameObject.AddComponent<ScreenManagerScripts.HomeScreenScripts.BtnScript>();
-                    Globals.screenManager.secCanvas.transform.Find(this.name == "PageMark" ? "PageHist" : "PageMark").gameObject.GetComponent<Image>().color = Color.cyan;
-                    this.GetComponent<Image>().color = Color.gray;
-                    Globals.screenManager.ShowContent("LoadMarket", this.name == "PageHist" ? "History" : "");
-                    Destroy(this.GetComponent<ScreenManagerScripts.HomeScreenScripts.BtnScript>());
-                    break;
+                Globals.screenManager.ShowContent("Drop", "", false, id);
+            }
+            else
+            {
+                switch (this.name)
+                {
+                    case "Speed":
+                    case "Strength":
+                    case "Stamina":
+                        Globals.playerManager.IncrementStat(5, this.name);
+                        Globals.screenManager.ShowContent("Update");
+                        break;
 
-                case "Close":
-                    Globals.screenManager.secCanvas.SetActive(false);
-                    //TODO Fix why clear is required here
-                    Globals.screenManager.ClearSecCanvas();
-                    break;
+                    case "PageMark":
+                    case "PageHist":
+                        Globals.screenManager.secCanvas.transform.Find(this.name == "PageMark" ? "PageHist" : "PageMark").gameObject.AddComponent<ScreenManagerScripts.HomeScreenScripts.BtnScript>();
+                        Globals.screenManager.secCanvas.transform.Find(this.name == "PageMark" ? "PageHist" : "PageMark").gameObject.GetComponent<Image>().color = Color.cyan;
+                        this.GetComponent<Image>().color = Color.gray;
+                        Globals.screenManager.ShowContent("LoadMarket", this.name == "PageHist" ? "History" : "");
+                        Destroy(this.GetComponent<ScreenManagerScripts.HomeScreenScripts.BtnScript>());
+                        break;
+
+                    case "Close":
+                        Globals.screenManager.secCanvas.SetActive(false);
+                        //TODO Fix why clear is required here
+                        Globals.screenManager.ClearSecCanvas();
+                        break;
+                }
             }
         }
 

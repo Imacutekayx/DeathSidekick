@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -245,6 +246,8 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts
         public void ShowMarket(Transform secCanvasTransform)
         {
             actionType = "market";
+
+            Globals.playerManager.lstBuyable = Globals.playerManager.lstBuyable.OrderBy(x => x.week).ToList();
             
             //Back
             GameObject back = new GameObject();
@@ -392,6 +395,10 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts
                 Image tempImage = drop.AddComponent<Image>();
                 tempImage.rectTransform.sizeDelta = new Vector2(width / 4, height / 9 * 2);
                 tempImage.rectTransform.position = new Vector2(i == 0 || i == 2 ? -width / 4 : width / 4, i == 0 || i == 1 ? height / 9 * 2 : -height / 3 * 2);
+                BoxCollider2D tempBox = drop.AddComponent<BoxCollider2D>();
+                tempBox.size = tempImage.rectTransform.sizeDelta;
+                tempBox.transform.position = tempImage.rectTransform.position;
+                drop.AddComponent<ScreenManagerScripts.HomeScreenScripts.BtnScript>();
                 drop.transform.SetParent(secCanvasTransform, false);
             }
 
@@ -426,7 +433,7 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts
             };
             tempImage = close.AddComponent<Image>();
             tempImage.rectTransform.sizeDelta = new Vector2(width / 8, height / 9 * 2);
-            tempImage.rectTransform.position = new Vector2(actionType == "market" ? width / 16 * 15 : width / 8 * 7, height / 9 * 8);
+            tempImage.rectTransform.position = new Vector2(actionType == "market" ? width / 16 * 15 : width / 16 * 7, height / 9 * 8);
             BoxCollider2D tempBox = close.AddComponent<BoxCollider2D>();
             tempBox.size = tempImage.rectTransform.sizeDelta;
             tempBox.transform.position = tempImage.rectTransform.position;
@@ -486,7 +493,7 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts
 
                     //Name
                     GameObject nameItem = Globals.screenManager.secCanvas.transform.Find("nameItem" + currentObject).gameObject;
-                    nameItem.GetComponent<Text>().text = currentMarket[i-1].used ? "Bloody" : "" + currentMarket[i - 1].name;
+                    nameItem.GetComponent<Text>().text = (currentMarket[i-1].used ? "Used " : "") + currentMarket[i - 1].name;
                     nameItem.SetActive(true);
 
                     if (actionType == "market")
@@ -498,7 +505,9 @@ namespace Assets.Scripts.Managers.ScreenManagerScripts
                     }
                     else
                     {
-                        Globals.screenManager.secCanvas.transform.Find("drop" + currentObject).gameObject.SetActive(true);
+                        GameObject drop = Globals.screenManager.secCanvas.transform.Find("drop" + currentObject).gameObject;
+                        drop.GetComponent<ScreenManagerScripts.HomeScreenScripts.BtnScript>().id = i - 1;
+                        drop.SetActive(true);
                     }
                 }
                 else

@@ -10,11 +10,11 @@ namespace Assets.Scripts.Managers
     {
         //Objects
         private Player.Player player = new Player.Player();
-        public List<Player.XMLPlayer.Item> lstBuyable = new List<Player.XMLPlayer.Item> { new Player.XMLPlayer.Item("knife", 1, 50, false, 3), new Player.XMLPlayer.Item("gun", 1, 250, false, 3),
-            new Player.XMLPlayer.Item("sword", 1, 150, false, 3), new Player.XMLPlayer.Item("falcon punch", 1, 10, false, 3),new Player.XMLPlayer.Item("kamehameha", 1, 5000, false, 3),
-            new Player.XMLPlayer.Item("jsp", 1, 9999.95, false, 3), new Player.XMLPlayer.Item("item", 1, 0, false, 3), new Player.XMLPlayer.Item("imet", 1, 15, false, 3)};
+        public List<Player.XMLPlayer.Item> lstBuyable = new List<Player.XMLPlayer.Item> { new Player.XMLPlayer.Item("Knife", 1, 50, false, 3), new Player.XMLPlayer.Item("Gun", 1, 250, false, 3),
+            new Player.XMLPlayer.Item("Sword", 1, 150, false, 3), new Player.XMLPlayer.Item("AK47", 1, 10, false, 3),new Player.XMLPlayer.Item("Kamehameha", 1, 5000, false, 3),
+            new Player.XMLPlayer.Item("Jsp", 1, 9999.95, false, 3), new Player.XMLPlayer.Item("Item", 1, 0, false, 3), new Player.XMLPlayer.Item("Imet", 1, 15, false, 3)};
         public List<Player.XMLPlayer.Item> lstItems = new List<Player.XMLPlayer.Item>();
-        //TODO Create a wait list for items in delivery and check them in dayPassed before adding them to player.bag
+        public List<Player.XMLPlayer.Item> lstWait = new List<Player.XMLPlayer.Item>();
         public List<Player.XMLPlayer.Power> lstPowersLocked = new List<Player.XMLPlayer.Power>();
         public List<Player.XMLPlayer.Summon> lstSummons = new List<Player.XMLPlayer.Summon>();
 
@@ -46,12 +46,12 @@ namespace Assets.Scripts.Managers
         /// <param name="Name">Name of the item</param>
         public void AddToPlayerBag(string Name)
         {
-            foreach(Player.XMLPlayer.Item obj in lstBuyable)
+            foreach(Player.XMLPlayer.Item obj in lstWait)
             {
                 if(obj.name == Name)
                 {
                     player.AddToBag(obj);
-                    lstBuyable.Remove(obj);
+                    lstWait.Remove(obj);
                     return;
                 }
             }
@@ -89,16 +89,13 @@ namespace Assets.Scripts.Managers
         /// </summary>
         public void DayPassed()
         {
-            List<Player.XMLPlayer.Item> bag = ShowBag();
-            foreach(Player.XMLPlayer.Item item in bag)
+            List<Player.XMLPlayer.Item> tempList = new List<Player.XMLPlayer.Item>(lstWait);
+            foreach(Player.XMLPlayer.Item item in tempList)
             {
-                if(item.days > 0)
+                --item.days;
+                if (item.days == 0)
                 {
-                    if(item.days == 1)
-                    {
-                        Debug.Log(item.name + " is delivered");
-                    }
-                    --item.days;
+                    AddToPlayerBag(item.name);
                 }
             }
         }

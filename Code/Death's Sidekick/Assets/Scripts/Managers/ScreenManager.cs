@@ -437,16 +437,7 @@ namespace Assets.Scripts.Managers
                     case "LoadMarket":
                         if (nameContent == "History")
                         {
-                            List<Player.XMLPlayer.Item> hist = new List<Player.XMLPlayer.Item>();
-                            List<Player.XMLPlayer.Item> bag = Globals.playerManager.ShowBag();
-                            foreach (Player.XMLPlayer.Item inBag in bag)
-                            {
-                                if (inBag.days != 0)
-                                {
-                                    hist.Add(inBag);
-                                }
-                            }
-                            homeScreen.LoadMarket(hist, true, false);
+                            homeScreen.LoadMarket(Globals.playerManager.lstWait, true, false);
                         }
                         else
                         {
@@ -459,11 +450,18 @@ namespace Assets.Scripts.Managers
                         if (Globals.playerManager.Money() >= item.price)
                         {
                             Globals.playerManager.Money(-item.price);
-                            Globals.playerManager.AddToPlayerBag(item.name);
+                            Globals.playerManager.lstWait.Add(item);
+                            Globals.playerManager.lstBuyable.Remove(item);
                             homeScreen.LoadMarket(Globals.playerManager.lstBuyable);
                         }
                         break;
-                        
+
+                    case "Drop":
+                        List<Player.XMLPlayer.Item> bag = Globals.playerManager.ShowBag();
+                        Globals.playerManager.RemoveFromPlayerBag(bag[Convert.ToInt32(valueContent)].name);
+                        homeScreen.LoadBag();
+                        break;
+
                     case "Scroll":
                         if(valueContent < 0f)
                         {
