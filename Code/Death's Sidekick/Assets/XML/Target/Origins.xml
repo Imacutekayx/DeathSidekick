@@ -1,0 +1,2481 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Origins>
+  <Origin>
+    <Name>
+      Asia
+    </Name>
+    <Nbr>
+      4504404
+    </Nbr>
+
+    <Area>
+      <AName>
+        Central Asia
+      </AName>
+
+      <ANbr>
+        70838
+      </ANbr>
+
+      <Country>
+        <CName>
+          Uzbekistan
+        </CName>
+
+        <CNbr>
+          31910
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Kazakhstan
+        </CName>
+
+        <CNbr>
+          18204
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Tajikistan
+        </CName>
+
+        <CNbr>
+          8921
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Kyrgyzstan
+        </CName>
+
+        <CNbr>
+          6045
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Turkmenistan
+        </CName>
+
+        <CNbr>
+          5758
+        </CNbr>
+      </Country>
+    </Area>
+
+    <Area>
+      <AName>
+        Eastern Asia
+      </AName>
+
+      <ANbr>
+        1648160
+      </ANbr>
+
+      <Country>
+        <CName>
+          China
+        </CName>
+
+        <CNbr>
+          1409517
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Japan
+        </CName>
+
+        <CNbr>
+          127484
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          South Korea
+        </CName>
+
+        <CNbr>
+          50982
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          North Korea
+        </CName>
+
+        <CNbr>
+          25490
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Taiwan
+        </CName>
+
+        <CNbr>
+          23626
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Hong Kong
+        </CName>
+
+        <CNbr>
+          7364
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Mongolia
+        </CName>
+
+        <CNbr>
+          3075
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Macau
+        </CName>
+
+        <CNbr>
+          622
+        </CNbr>
+      </Country>
+    </Area>
+
+    <Area>
+      <AName>
+        South-eastern Asia
+      </AName>
+
+      <ANbr>
+        648775
+      </ANbr>
+
+      <Country>
+        <CName>
+          Indonesia
+        </CName>
+
+        <CNbr>
+          263991
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Philippines
+        </CName>
+
+        <CNbr>
+          104918
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Vietnam
+        </CName>
+
+        <CNbr>
+          95540
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Thailand
+        </CName>
+
+        <CNbr>
+          69037
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Myanmar
+        </CName>
+
+        <CNbr>
+          53370
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Malaysia
+        </CName>
+
+        <CNbr>
+          31624
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Cambodia
+        </CName>
+
+        <CNbr>
+          16005
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Laos
+        </CName>
+
+        <CNbr>
+          6858
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Singapore
+        </CName>
+
+        <CNbr>
+          5708
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          East Timor
+        </CName>
+
+        <CNbr>
+          1296
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Brunei
+        </CName>
+
+        <CNbr>
+          428
+        </CNbr>
+      </Country>
+    </Area>
+
+    <Area>
+      <AName>
+        Southern Asia
+      </AName>
+
+      <ANbr>
+        1868979
+      </ANbr>
+
+      <Country>
+        <CName>
+          India
+        </CName>
+
+        <CNbr>
+          1339180
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Pakistan
+        </CName>
+
+        <CNbr>
+          197015
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Bangladesh
+        </CName>
+
+        <CNbr>
+          164669
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Iran
+        </CName>
+
+        <CNbr>
+          81162
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Afghanistan
+        </CName>
+
+        <CNbr>
+          35530
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Nepal
+        </CName>
+
+        <CNbr>
+          29304
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Sri Lanka
+        </CName>
+
+        <CNbr>
+          20876
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Bhutan
+        </CName>
+
+        <CNbr>
+          807
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Maldives
+        </CName>
+
+        <CNbr>
+          436
+        </CNbr>
+      </Country>
+    </Area>
+
+    <Area>
+      <AName>
+        Western Asia
+      </AName>
+
+      <ANbr>
+        267652
+      </ANbr>
+
+      <Country>
+        <CName>
+          Turkey
+        </CName>
+
+        <CNbr>
+          80745
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Iraq
+        </CName>
+
+        <CNbr>
+          38274
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Saudi Arabia
+        </CName>
+
+        <CNbr>
+          32938
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Yemen
+        </CName>
+
+        <CNbr>
+          28250
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Syria
+        </CName>
+
+        <CNbr>
+          18269
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Azerbaijan
+        </CName>
+
+        <CNbr>
+          9827
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Jordan
+        </CName>
+
+        <CNbr>
+          9702
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          United Arab Emirates
+        </CName>
+
+        <CNbr>
+          9400
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Israel
+        </CName>
+
+        <CNbr>
+          8321
+        </CNbr>
+      </Country>
+      
+      <Country>
+        <CName>
+          Lebanon
+        </CName>
+
+        <CNbr>
+          6082
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Palestine
+        </CName>
+
+        <CNbr>
+          4920
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Oman
+        </CName>
+
+        <CNbr>
+          4636
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Kuwait
+        </CName>
+
+        <CNbr>
+          4136
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Georgia
+        </CName>
+
+        <CNbr>
+          3912
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Armenia
+        </CName>
+
+        <CNbr>
+          2930
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Qatar
+        </CName>
+
+        <CNbr>
+          2639
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Bahrain
+        </CName>
+
+        <CNbr>
+          1492
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Cyprus
+        </CName>
+
+        <CNbr>
+          1179
+        </CNbr>
+      </Country>
+    </Area>
+  </Origin>
+
+  <Origin>
+    <Name>
+      Americas
+    </Name>
+    <Nbr>
+      1006774
+    </Nbr>
+
+    <Area>
+      <AName>
+        Northern America
+      </AName>
+
+      <ANbr>
+        361206
+      </ANbr>
+
+      <Country>
+        <CName>
+          United States
+        </CName>
+        <CNbr>
+          324459
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Canada
+        </CName>
+        <CNbr>
+          36624
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Bermuda
+        </CName>
+        <CNbr>
+          61
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Greenland
+        </CName>
+        <CNbr>
+          56
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Saint Pierre and Miquelon
+        </CName>
+        <CNbr>
+          6
+        </CNbr>
+      </Country>
+    </Area>
+
+    <Area>
+      <AName>
+        South America
+      </AName>
+        
+      <ANbr>
+        424386
+      </ANbr>
+
+      <Country>
+        <CName>
+          Brazil
+        </CName>
+        <CNbr>
+          209288
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Colombia
+        </CName>
+        <CNbr>
+          49065
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Argentina
+        </CName>
+        <CNbr>
+          44271
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Peru
+        </CName>
+        <CNbr>
+          32165
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Venezuela
+        </CName>
+        <CNbr>
+          31977
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Chile
+        </CName>
+        <CNbr>
+          18054
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Ecuador
+        </CName>
+        <CNbr>
+          16624
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Bolivia
+        </CName>
+        <CNbr>
+          11051
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Paraguay
+        </CName>
+        <CNbr>
+          6811
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Uruguay
+        </CName>
+        <CNbr>
+          3456
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Guyana
+        </CName>
+        <CNbr>
+          777
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Suriname
+        </CName>
+        <CNbr>
+          563
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          French Guiana
+        </CName>
+        <CNbr>
+          282
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Falkland Islands
+        </CName>
+        <CNbr>
+          2
+        </CNbr>
+      </Country>
+    </Area>
+
+    <Area>
+      <AName>
+        Central America
+      </AName>
+
+      <ANbr>
+        177312
+      </ANbr>
+
+      <Country>
+        <CName>
+          Mexico
+        </CName>
+        <CNbr>
+          129163
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Guatemala
+        </CName>
+        <CNbr>
+          16913
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Honduras
+        </CName>
+        <CNbr>
+          9265
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          El Salvador
+        </CName>
+        <CNbr>
+          6377
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Nicaragua
+        </CName>
+        <CNbr>
+          6217
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Costa Rica
+        </CName>
+        <CNbr>
+          4905
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Panama
+        </CName>
+        <CNbr>
+          4098
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Belize
+        </CName>
+        <CNbr>
+          374
+        </CNbr>
+      </Country>
+    </Area>
+
+    <Area>
+      <AName>
+        Caribbean
+      </AName>
+
+      <ANbr>
+        43870
+      </ANbr>
+
+      <Country>
+        <CName>
+          Cuba
+        </CName>
+        <CNbr>
+          11484
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Haiti
+        </CName>
+        <CNbr>
+          10981
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Dominican Republic
+        </CName>
+        <CNbr>
+          10766
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Puerto Rico
+        </CName>
+        <CNbr>
+          3663
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Jamaica
+        </CName>
+        <CNbr>
+          2890
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Trinidad and Tobago
+        </CName>
+        <CNbr>
+          1369
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Guadeloupe
+        </CName>
+        <CNbr>
+          449
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Bahamas
+        </CName>
+        <CNbr>
+          395
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Martinique
+        </CName>
+        <CNbr>
+          384
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Barbados
+        </CName>
+        <CNbr>
+          285
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Saint Lucia
+        </CName>
+        <CNbr>
+          178
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Curaçao
+        </CName>
+        <CNbr>
+          160
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Saint Vincent
+        </CName>
+        <CNbr>
+          109
+        </CNbr>
+      </Country>
+      
+      <Country>
+      <CName>
+        Grenada
+      </CName>
+      <CNbr>
+        107
+      </CNbr>
+    </Country>
+
+      <Country>
+        <CName>
+          Aruba
+        </CName>
+        <CNbr>
+          105
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          US Virgin Islands
+        </CName>
+        <CNbr>
+          104
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Antigua and Barbuda
+        </CName>
+        <CNbr>
+          102
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Dominica
+        </CName>
+        <CNbr>
+          73
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Cayman Islands
+        </CName>
+        <CNbr>
+          61
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Saint Kitts and Nevis
+        </CName>
+        <CNbr>
+          55
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Saint Maarten
+        </CName>
+        <CNbr>
+          40
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Turks and Caicos Islands
+        </CName>
+        <CNbr>
+          35
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          British Virgin Islands
+        </CName>
+        <CNbr>
+          31
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Caribbean Netherlands
+        </CName>
+        <CNbr>
+          25
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Anguilla
+        </CName>
+        <CNbr>
+          14
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Montserrat
+        </CName>
+        <CNbr>
+          5
+        </CNbr>
+      </Country>
+    </Area>
+  </Origin>
+
+  <Origin>
+    <Name>
+      Africa
+    </Name>
+    <Nbr>
+      1256209
+    </Nbr>
+
+    <Area>
+      <AName>
+        Western Africa
+      </AName>
+      <ANbr>
+        371982
+      </ANbr>
+
+      <Country>
+        <CName>
+          Nigeria
+        </CName>
+        <CNbr>
+          190886
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Ghana
+        </CName>
+        <CNbr>
+          28833
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Ivory Coast
+        </CName>
+        <CNbr>
+          24294
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Niger
+        </CName>
+        <CNbr>
+          21447
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Burkina Faso
+        </CName>
+        <CNbr>
+          19193
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Mali
+        </CName>
+        <CNbr>
+          18541
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Senegal
+        </CName>
+        <CNbr>
+          15850
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Guinea
+        </CName>
+        <CNbr>
+          12717
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Benin
+        </CName>
+        <CNbr>
+          11175
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Togo
+        </CName>
+        <CNbr>
+          7797
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Sierra Leone
+        </CName>
+        <CNbr>
+          7557
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Liberia
+        </CName>
+        <CNbr>
+          4731
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Mauritania
+        </CName>
+        <CNbr>
+          4420
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          The Gambia
+        </CName>
+        <CNbr>
+          2100
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Guinea-Bissau
+        </CName>
+        <CNbr>
+          1861
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Cape Verde
+        </CName>
+        <CNbr>
+          546
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Saint Helena
+        </CName>
+        <CNbr>
+          4
+        </CNbr>
+      </Country>
+    </Area>
+
+    <Area>
+      <AName>
+        Eastern Africa
+      </AName>
+      <ANbr>
+        422025
+      </ANbr>
+
+      <Country>
+        <CName>
+          Ethiopa
+        </CName>
+        <CNbr>
+          104957
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Tanzania
+        </CName>
+        <CNbr>
+          57310
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Kenya
+        </CName>
+        <CNbr>
+          49699
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Uganda
+        </CName>
+        <CNbr>
+          42862
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Mozambique
+        </CName>
+        <CNbr>
+          29668
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Madagascar
+        </CName>
+        <CNbr>
+          25570
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Malawi
+        </CName>
+        <CNbr>
+          18622
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Zambia
+        </CName>
+        <CNbr>
+          17094
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Zimbabwe
+        </CName>
+        <CNbr>
+          16529
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Somalia
+        </CName>
+        <CNbr>
+          14742
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          South Sudan
+        </CName>
+        <CNbr>
+          12575
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Rwanda
+        </CName>
+        <CNbr>
+          12208
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Burundi
+        </CName>
+        <CNbr>
+          10864
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Eritrea
+        </CName>
+        <CNbr>
+          5068
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Mauritius
+        </CName>
+        <CNbr>
+          1265
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Djibouti
+        </CName>
+        <CNbr>
+          956
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Réunion
+        </CName>
+        <CNbr>
+          876
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Comoros
+        </CName>
+        <CNbr>
+          813
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Mayotte
+        </CName>
+        <CNbr>
+          253
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Seychelles
+        </CName>
+        <CNbr>
+          94
+        </CNbr>
+      </Country>
+    </Area>
+
+    <Area>
+      <AName>
+        Northern Africa
+      </AName>
+      <ANbr>
+        233601
+      </ANbr>
+
+      <Country>
+        <CName>
+          Egypt
+        </CName>
+        <CNbr>
+          97553
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Algeria
+        </CName>
+        <CNbr>
+          41318
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Sudan
+        </CName>
+        <CNbr>
+          40533
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Morocco
+        </CName>
+        <CNbr>
+          35739
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Tunisia
+        </CName>
+        <CNbr>
+          11532
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Libya
+        </CName>
+        <CNbr>
+          6374
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Western Sahara
+        </CName>
+        <CNbr>
+          552
+        </CNbr>
+      </Country>
+    </Area>
+
+    <Area>
+      <AName>
+        Middle Africa
+      </AName>
+      <ANbr>
+        163490
+      </ANbr>
+
+      <Country>
+        <CName>
+          Democratic Republic of the Congo
+        </CName>
+        <CNbr>
+          81339
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Angola
+        </CName>
+        <CNbr>
+          29784
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Cameroon
+        </CName>
+        <CNbr>
+          24053
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Chad
+        </CName>
+        <CNbr>
+          14899
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Congo
+        </CName>
+        <CNbr>
+          5260
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Central African Republic
+        </CName>
+        <CNbr>
+          4659
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Gabon
+        </CName>
+        <CNbr>
+          2025
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Equatorial Guinea
+        </CName>
+        <CNbr>
+          1267
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Sao Tome and Principe
+        </CName>
+        <CNbr>
+          204
+        </CNbr>
+      </Country>
+    </Area>
+
+    <Area>
+      <AName>
+        Southern Africa
+      </AName>
+      <ANbr>
+        65141
+      </ANbr>
+
+      <Country>
+        <CName>
+          South Africa
+        </CName>
+        <CNbr>
+          56717
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Namibia
+        </CName>
+        <CNbr>
+          2533
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Botswana
+        </CName>
+        <CNbr>
+          2291
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Lesotho
+        </CName>
+        <CNbr>
+          2233
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Eswatini
+        </CName>
+        <CNbr>
+          1367
+        </CNbr>
+      </Country>
+    </Area>
+  </Origin>
+
+  <Origin>
+    <Name>
+      Europe
+    </Name>
+    <Nbr>
+      742050
+    </Nbr>
+
+    <Area>
+      <AName>
+        Eastern Europe
+      </AName>
+
+      <ANbr>
+        292449
+      </ANbr>
+
+      <Country>
+        <CName>
+          Russia
+        </CName>
+
+        <CNbr>
+          143989
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Ukraine
+        </CName>
+
+        <CNbr>
+          44222
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Poland
+        </CName>
+
+        <CNbr>
+          38170
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Romania
+        </CName>
+
+        <CNbr>
+          19679
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Czech Republic
+        </CName>
+
+        <CNbr>
+          10618
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Hungary
+        </CName>
+
+        <CNbr>
+          9721
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Belarus
+        </CName>
+
+        <CNbr>
+          9468
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Bulgaria
+        </CName>
+
+        <CNbr>
+          7084
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Slovakia
+        </CName>
+
+        <CNbr>
+          5447
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Moldova
+        </CName>
+
+        <CNbr>
+          4051
+        </CNbr>
+      </Country>
+    </Area>
+  
+    <Area>
+      <AName>
+        Northern Europe
+      </AName>
+
+      <ANbr>
+        104194
+      </ANbr>
+    
+      <Country>
+        <CName>
+          United Kingdom
+        </CName>
+
+        <CNbr>
+          66181
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Sweden
+        </CName>
+
+        <CNbr>
+          9910
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Denmark
+        </CName>
+
+        <CNbr>
+          5733
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Finland
+        </CName>
+
+        <CNbr>
+          5523
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Norway
+        </CName>
+
+        <CNbr>
+          5305
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Ireland
+        </CName>
+
+        <CNbr>
+          4761
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Lithuania
+        </CName>
+
+        <CNbr>
+          2890
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Latvia
+        </CName>
+
+        <CNbr>
+          1949
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Estonia
+        </CName>
+
+        <CNbr>
+          1309
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Iceland
+        </CName>
+
+        <CNbr>
+          335
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Guernsey and Jersey
+        </CName>
+
+        <CNbr>
+          165
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Isle of Man
+        </CName>
+
+        <CNbr>
+          84
+        </CNbr>
+      </Country>
+    
+      <Country>
+        <CName>
+          Faroe Islands
+        </CName>
+
+        <CNbr>
+          49
+        </CNbr>
+      </Country>
+    </Area>
+  
+    <Area>
+      <AName>
+        Southern Europe
+      </AName>
+
+      <ANbr>
+        151981
+      </ANbr>
+
+      <Country>
+        <CName>
+          Italy
+        </CName>
+
+        <CNbr>
+          59359
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Spain
+        </CName>
+
+        <CNbr>
+          46354
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Greece
+        </CName>
+
+        <CNbr>
+          11159
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Portugal
+        </CName>
+
+        <CNbr>
+          10329
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Serbia
+        </CName>
+
+        <CNbr>
+          8790
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Croatia
+        </CName>
+
+        <CNbr>
+          4189
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Bosnia and Herzegovina
+        </CName>
+
+        <CNbr>
+          3507
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Albania
+        </CName>
+
+        <CNbr>
+          2930
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Republic of Macedonia
+        </CName>
+
+        <CNbr>
+          2083
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Slovenia
+        </CName>
+
+        <CNbr>
+          2079
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Montenegro
+        </CName>
+
+        <CNbr>
+          628
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Malta
+        </CName>
+
+        <CNbr>
+          430
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Andorra
+        </CName>
+
+        <CNbr>
+          76
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Gibraltar
+        </CName>
+
+        <CNbr>
+          34
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          San Marino
+        </CName>
+
+        <CNbr>
+          33
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Vatican City
+        </CName>
+
+        <CNbr>
+          1
+        </CNbr>
+      </Country>
+    </Area>
+
+    <Area>
+      <AName>
+        Western Europe
+      </AName>
+
+      <ANbr>
+        193426
+      </ANbr>
+
+      <Country>
+        <CName>
+          Germany
+        </CName>
+
+        <CNbr>
+          82114
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          France
+        </CName>
+
+        <CNbr>
+          64979
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Netherland
+        </CName>
+
+        <CNbr>
+          17035
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Belgium
+        </CName>
+
+        <CNbr>
+          11429
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Austria
+        </CName>
+
+        <CNbr>
+          8735
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Switzerland
+        </CName>
+
+        <CNbr>
+          8476
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Luxembourg
+        </CName>
+
+        <CNbr>
+          583
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Monaco
+        </CName>
+
+        <CNbr>
+          38
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Liechtenstein
+        </CName>
+
+        <CNbr>
+          37
+        </CNbr>
+      </Country>
+    </Area>
+  </Origin>
+
+  <Origin>
+    <Name>
+      Oceania
+    </Name>
+    <Nbr>
+      40682
+    </Nbr>
+
+    <Area>
+      <AName>
+        Australia and New Zealand
+      </AName>
+
+      <ANbr>
+        29155
+      </ANbr>
+
+      <Country>
+        <CName>
+          Australia
+        </CName>
+
+        <CNbr>
+          24450
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          New Zealand
+        </CName>
+
+        <CNbr>
+          4705
+        </CNbr>
+      </Country>
+    </Area>
+
+    <Area>
+      <AName>
+        Melanesia
+      </AName>
+
+      <ANbr>
+        10319
+      </ANbr>
+
+      <Country>
+        <CName>
+          Papua New Guinea
+        </CName>
+
+        <CNbr>
+          8251
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Fiji
+        </CName>
+
+        <CNbr>
+          905
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Solomon Islands
+        </CName>
+
+        <CNbr>
+          611
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          New Caledonia
+        </CName>
+
+        <CNbr>
+          276
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Vanuatu
+        </CName>
+
+        <CNbr>
+          276
+        </CNbr>
+      </Country>
+    </Area>
+
+    <Area>
+      <AName>
+        Micronesia
+      </AName>
+
+      <ANbr>
+        525
+      </ANbr>
+
+      <Country>
+        <CName>
+          Guam
+        </CName>
+
+        <CNbr>
+          164
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Kiribati
+        </CName>
+
+        <CNbr>
+          116
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Federated States of Micronesia
+        </CName>
+
+        <CNbr>
+          105
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Northern Mariana Islands
+        </CName>
+
+        <CNbr>
+          55
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Marshall Islands
+        </CName>
+
+        <CNbr>
+          53
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Palau
+        </CName>
+
+        <CNbr>
+          21
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Nauru
+        </CName>
+
+        <CNbr>
+          11
+        </CNbr>
+      </Country>
+    </Area>
+
+    <Area>
+      <AName>
+        Polynesia
+      </AName>
+
+      <ANbr>
+        683
+      </ANbr>
+
+      <Country>
+        <CName>
+          French Polynesia
+        </CName>
+
+        <CNbr>
+          283
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Samoa
+        </CName>
+
+        <CNbr>
+          196
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Tonga
+        </CName>
+
+        <CNbr>
+          108
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          American Samoa
+        </CName>
+
+        <CNbr>
+          55
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Cook Islands
+        </CName>
+
+        <CNbr>
+          17
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Wallis and Futuna
+        </CName>
+
+        <CNbr>
+          11
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Tuvalu
+        </CName>
+
+        <CNbr>
+          11
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Niue
+        </CName>
+
+        <CNbr>
+          1
+        </CNbr>
+      </Country>
+
+      <Country>
+        <CName>
+          Tokelau
+        </CName>
+
+        <CNbr>
+          1
+        </CNbr>
+      </Country>
+    </Area>
+  </Origin>
+</Origins>

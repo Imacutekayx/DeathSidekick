@@ -3,7 +3,7 @@
 /// <summary>
 /// Load the beginning of the Game and change settings
 /// </summary>
-public class Load : MonoBehaviour {
+public class Load {
 
     //Variables
     public float horizontalResolution = 1920;
